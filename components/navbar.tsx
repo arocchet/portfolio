@@ -20,13 +20,6 @@ import {
   cn,
 } from "@heroui/react";
 
-
-const menuItems = [
-  "Coming soon...",
-  "Coming soon...",
-  "Coming soon...",
-];
-
 const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
   ({ classNames = {}, ...props }, ref) => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -43,7 +36,7 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
           item: "hidden md:flex",
           ...classNames,
         }}
-        height="60px"
+        height="80px"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
       >
@@ -60,12 +53,10 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
         {/* Center Content */}
         <NavbarContent justify="center">
           <NavbarItem
-            isActive
-            className="data-[active='true']:font-medium[date-active='true']"
           >
             <Link
-              aria-current="page"
-              className="text-default-foreground"
+
+              className="text-default-500 x"
               href="/"
               size="sm"
             >
@@ -73,18 +64,18 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link className="text-default-500" href="#" size="sm">
-            Coming soon...
+            <Link className="text-default-500" href="/school" size="sm">
+              My School
             </Link>
           </NavbarItem>
           <NavbarItem>
             <Link className="text-default-500" href="#" size="sm">
-            Coming soon...
+              Projects
             </Link>
           </NavbarItem>
           <NavbarItem>
             <Link className="text-default-500" href="#" size="sm">
-            Coming soon...
+              About me
             </Link>
           </NavbarItem>
         </NavbarContent>
@@ -109,7 +100,7 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
         <NavbarMenuToggle className="text-default-400 md:hidden" />
 
         <NavbarMenu
-          className="top-[calc(var(--navbar-height)_-_1px)] max-h-[250px] bg-default-200/50 pb-6 pt-10 shadow-medium backdrop-blur-md backdrop-saturate-150 dark:bg-default-100/50 "
+          className="top-[calc(var(--navbar-height)_-_1px)] min-h-fit bg-default-200/50 pb-6 pt-10 shadow-medium backdrop-blur-md backdrop-saturate-150 dark:bg-default-100/50"
           motionProps={{
             initial: { opacity: 0, y: -30 },
             animate: { opacity: 1, y: 0 },
@@ -120,49 +111,79 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
             },
           }}
         >
+          <Divider className="opacity-50 " />
           <NavbarMenuItem className="ml-2 !flex gap-2 justify-center">
             <Link
               isExternal
               aria-label="Discord"
               href={siteConfig.links.discord}
               size="md"
-              
             >
               <DiscordIcon className="text-default-500" />
             </Link>
-            <Link isExternal aria-label="Github" href={siteConfig.links.github} size="md">
+            <Link
+              isExternal
+              aria-label="Github"
+              href={siteConfig.links.github}
+              size="md"
+            >
               <GithubIcon className="text-default-500" />
             </Link>
             <ThemeSwitch />
           </NavbarMenuItem>
           <Divider className="opacity-50" />
           <NavbarMenuItem
-            isActive
-            className="data-[active='true']:font-medium[date-active='true'] "
+           
           >
             <Link
-            
               aria-current="page"
-              className="text-default-foreground justify-center flex"
+              className="text-default-500 justify-center flex"
               href="/"
               size="md"
-
             >
               Home
             </Link>
           </NavbarMenuItem>
           <Divider className="opacity-50 " />
-          {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link className="mb-2 w-full text-default-500 justify-center" href="#" size="md">
-                {item}
-              </Link>
-              {index < menuItems.length - 1 && (
-                <Divider className="opacity-50" />
-              )}
-            </NavbarMenuItem>
-          ))}
+
+          <NavbarMenuItem>
+            
+            <Link
+              className="mb-2 w-full text-default-500 justify-center"
+               aria-current="page"
+              href="/school"
+              size="md"
+            >
+              My School
+            </Link>
+
+            <Divider className="opacity-50" />
+          </NavbarMenuItem>
+
+          <NavbarMenuItem>
+            <Link
+              className="mb-2 w-full text-default-500 justify-center"
+              href="#"
+              size="md"
+            >
+              Projects
+            </Link>
+
+            <Divider className="opacity-50" />
+          </NavbarMenuItem>
+
+          <NavbarMenuItem>
+            <Link
+              className="mb-2 w-full text-default-500 justify-center"
+              href="#"
+              size="md"
+            >
+              About me
+            </Link>
+            <Divider className="opacity-50 " />
+          </NavbarMenuItem>
         </NavbarMenu>
+        
       </Navbar>
     );
   }

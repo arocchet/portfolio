@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body .bg-background {
+  background-color: transparent !important; /* Ou une autre couleur de ton choix */
+}
+
+:root  {
+    background-color: transparent; /* Ou une autre couleur de ton choix */
+  }

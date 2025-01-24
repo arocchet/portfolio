@@ -1,10 +1,9 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@heroui/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
-
+import BasicNavbar from "@/components/navbar";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 
@@ -36,17 +35,17 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
+          "font-sans antialiased",
           fontSans.variable,
+          "dark:bg-black-90 light:bg-white-90" // Déplace la classe bg ici
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <main className="container mx-auto max-w-7xl pt-5 px-6 flex-grow overflow-hidden">
+          <div className="relative flex flex-col h-screen overflow-auto">
+            <main className="container mx-auto max-w-7xl pt-5 px-6 flex-grow">
+              <BasicNavbar className="absolute"/>
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-            </footer>
           </div>
         </Providers>
       </body>
