@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 import { Providers } from "./providers";
 import BasicNavbar from "@/components/navbar";
+import { DebuggerButton } from "@/components/debug-button"; 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-5 px-6 flex-grow">
               <BasicNavbar className="absolute"/>
               {children}
+              <DebuggerButton />
             </main>
           </div>
         </Providers>
