@@ -46,7 +46,7 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-5 px-6 flex-grow">
               <BasicNavbar className="absolute"/>
               {children}
-              <DebuggerButton />
+              {/*<DebuggerButton />*/}
             </main>
           </div>
         </Providers>
