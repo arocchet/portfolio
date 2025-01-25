@@ -9,10 +9,7 @@ import {
   Button,
   useDisclosure,
   Image,
-  Link,
   Tooltip,
-  Avatar,
-  AvatarGroup,
 } from "@heroui/react";
 
 export const DrawerDefinition = () => {
@@ -29,6 +26,7 @@ export const DrawerDefinition = () => {
         classNames={{
           base: "data-[placement=right]:sm:m-2 data-[placement=left]:sm:m-2  rounded-medium",
         }}
+        size={"sm"} 
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         motionProps={{
@@ -71,7 +69,7 @@ export const DrawerDefinition = () => {
                     </svg>
                   </Button>
                 </Tooltip>
-                <div className="w-full flex justify-start gap-2 mt-1">
+                <div className="w-full flex justify-start gap-2 mt-1 text-default-700">
                   What's mean "gamified" ?
                 </div>
               </DrawerHeader>
@@ -87,7 +85,7 @@ export const DrawerDefinition = () => {
                   />
                 </div>
                 <div className="flex flex-col gap-2 py-4">
-                  <h1 className="text-2xl font-bold leading-7">
+                  <h1 className="text-2xl font-bold leading-7 text-default-700">
                     Here is my current level
                   </h1>
                   <p className="text-sm text-default-500">
@@ -105,7 +103,7 @@ export const DrawerDefinition = () => {
                         </div>
                       </div>
                       <div className="flex flex-col gap-0.5">
-                        <p className="text-medium text-foreground font-medium">
+                        <p className="text-medium font-medium text-default-700">
                           My level is at this date
                         </p>
                         <p className="text-small text-default-500">
@@ -115,7 +113,7 @@ export const DrawerDefinition = () => {
                     </div>
                     <div className="flex gap-3 items-center"></div>
                     <div className="flex flex-col mt-4 gap-3 items-start">
-                      <span className="text-medium font-medium">
+                      <span className="text-medium font-medium text-default-700">
                         About the exercices
                       </span>
                       <div className="text-medium text-default-500 flex flex-col gap-2">

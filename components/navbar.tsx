@@ -47,7 +47,7 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
           <div className="rounded-full bg-background -ml-5">
             <Logo />
           </div>
-          <span className="ml-1 text-small font-medium ">Adrien</span>
+          <span className="ml-1 text-small font-medium ">Adrien R.</span>
         </NavbarBrand>
 
         {/* Center Content */}

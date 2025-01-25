@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-full w-full h-fit flex-col overflow-y-hidden dark:bg-black-90 light:bg-white-90 -mt-36">
+    <div className="relative flex min-h-full w-full h-fit flex-col overflow-y-hidden dark:bg-black-90 light:bg-white-90 -mt-10">
       <main className="container mx-auto flex flex-1 flex-col items-center overflow-hidden justify-center  px-8">
         <section className="z-20 flex flex-col items-center justify-center gap-[18px] sm:gap-6">
           <Button

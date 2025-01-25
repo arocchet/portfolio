@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 
 export function Footer() {
   return (
-    <footer className="text-white py-8 ">
+    <footer className="text-white py-8 -mt-16">
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex gap-6 mb-4">
           {/* Discord Link */}

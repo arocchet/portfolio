@@ -10,7 +10,7 @@ export default function SchoolPage() {
       <main className="container mx-auto flex flex-col items-center justify-center px-8 py-16 sm:py-24">
         {/* Introduction */}
         <section className="flex flex-col items-center justify-center gap-8 sm:gap-6">
-          <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight ">
+          <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight text-default-700">
             Here is Zone01!
           </h1>
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl">
@@ -19,7 +19,7 @@ export default function SchoolPage() {
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl">
             The goal is to train as a full-stack developer in 2 to 3 years, through work-study. From design to production of a project or application, I work with different programming languages. The approach is agile and collaborative, transforming me from a beginner to a developer of complete software. By completing more than 55 projects, I learn to code in JavaScript, Go, Rust, as well as in C, C++, Java, Python, and many more. This makes me capable of coding in any programming environment.
           </p>
-          <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight ">
+          <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight text-default-700">
             The program consists of:
           </h1>
           <ul className="text-lg sm:text-xl text-default-500 max-w-3xl list-disc pl-6">
@@ -32,7 +32,7 @@ export default function SchoolPage() {
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl ">
             The 01Edu platform includes detailed instructions, support videos, and built-in features to teach everyone the basics of programming. The 01 community encourages the creation of collective intelligence. Study groups, chats, and collaborative workspaces are provided to foster support and teamwork.
           </p>
-          <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight">
+          <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight text-default-700">
             After that..
           </h1>
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl">
