@@ -10,10 +10,10 @@ export default function Home() {
       <main className="container mx-auto flex flex-1 flex-col items-center overflow-hidden justify-center  px-8">
         <section className="z-20 flex flex-col items-center justify-center gap-[18px] sm:gap-6">
           <Button
-            className="h-9 overflow-hidden border-1 border-default-100 bg-default-50 px-[18px] py-2 text-small font-normal leading-5 text-default-500"
+            className="h-9 overflow-hidden border-1 border-default-50 dark:bg-gray-80 light:bg-white-90 text-white shadow-lg px-[18px] py-2 text-small font-normal leading-5 "
             endContent={
               <Icon
-                className="flex-none outline-none [&>path]:stroke-[2]"
+                className="flex-none outline-none [&>path]:stroke-[2] " 
                 icon="solar:arrow-right-linear"
                 width={20}
               />
@@ -26,27 +26,26 @@ export default function Home() {
           <div className="text-center text-[clamp(40px,10vw,44px)] font-bold leading-[1.2] tracking-tighter sm:text-[64px]">
             <div className="bg-hero-section-title bg-clip-text">
               Welcome to my <br /> Fullstack dev portfolio.
-            </div>
+            </div> 
           </div>
           <p className="text-center font-normal leading-7 sm:w-[466px] sm:text-[18px] text-default-500">
             Here is a presentation of my different skills, projects and information about me, enjoy reading!
           </p>
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
             <Button
-              className="h-10 w-[163px] border-1 border-default-100 px-[16px] py-[10px] text-small font-medium leading-5"
+              className="h-10 w-[163px] border-1 border-default-100 px-[16px] py-[10px] text-small font-medium leading-5 bg-gradient-to-tr from-pink-35 to-blue-50 max-w-min text-default-900"
               endContent={
-                <span className="pointer-events-none flex h-[22px] w-[22px] items-center justify-center rounded-full bg-default-100 ">
+                <span className="pointer-events-none flex h-[22px] w-[22px] items-center justify-center rounded-full bg-default-100 bg-transparent">
                   <Icon
-                    className="text-default-500 [&>path]:stroke-[1.5]"
-                    icon="solar:arrow-right-linear"
-                    width={16}
-                  />
+                className="flex-none outline-none [&>path]:stroke-[2] " 
+                icon="solar:arrow-right-linear"
+                width={16}
+              />
                 </span>
               }
               radius="full"
               variant="bordered"
-            >
-              About me
+            >About me
             </Button>
           </div>
         </section>
