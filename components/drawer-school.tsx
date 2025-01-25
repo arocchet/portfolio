@@ -15,7 +15,7 @@ import {
   
     return (
       <>
-        <Button className="size-1" onPress={onOpen}>gamified</Button>
+        <Button className="size-1  max-w-min text-default-500" onPress={onOpen}>gamified</Button>
         <Drawer
           isOpen={isOpen}
           motionProps={{
@@ -37,7 +37,7 @@ import {
           <DrawerContent>
             {(onClose) => (
               <>
-                <DrawerHeader className="flex flex-col gap-1">Title</DrawerHeader>
+                <DrawerHeader className="flex flex-col gap-1">What's mean "gamified" ?</DrawerHeader>
                 <DrawerBody>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolore libero cupiditate recusandae nostrum quidem consectetur repudiandae sunt ab unde id eum quos, mollitia repellendus qui iusto repellat asperiores. Numquam.</p>
                   <p>
