@@ -1,16 +1,17 @@
 "use client"
 
 import React from "react";
-import { Button } from "@heroui/react";
+import { Button, Link } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-full w-full h-fit flex-col overflow-y-hidden dark:bg-black-90 light:bg-white-90">
+    <div className="relative flex min-h-full w-full h-fit flex-col overflow-y-hidden dark:bg-black-90 light:bg-white-90 -mt-36">
       <main className="container mx-auto flex flex-1 flex-col items-center overflow-hidden justify-center  px-8">
         <section className="z-20 flex flex-col items-center justify-center gap-[18px] sm:gap-6">
           <Button
-            className="h-9 overflow-hidden border-1 border-default-50 dark:bg-gray-80 light:bg-white-90 text-white shadow-lg px-[18px] py-2 text-small font-normal leading-5 "
+            className="h-9 overflow-hidden border-1 border-default-50 dark:bg-gray-80
+             light:bg-white-90 text-white shadow-[0_4px_15px_0_rgba(0,0,0,0.25)] px-[18px] py-2 text-small font-normal leading-5 "
             endContent={
               <Icon
                 className="flex-none outline-none [&>path]:stroke-[2] " 
@@ -21,7 +22,13 @@ export default function Home() {
             radius="full"
             variant="bordered"
           >
-            See my projects
+            <Link
+                className="text-medium text-default-500 w-full py-2"
+                href="/school"
+                size="md"
+              >
+                My school
+              </Link>
           </Button>
           <div className="text-center text-[clamp(40px,10vw,44px)] font-bold leading-[1.2] tracking-tighter sm:text-[64px]">
             <div className="bg-hero-section-title bg-clip-text">
@@ -45,11 +52,12 @@ export default function Home() {
               }
               radius="full"
               variant="bordered"
-            >About me
+            >...
             </Button>
           </div>
         </section>
       </main>
+
     </div>
   );
 }

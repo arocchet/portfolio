@@ -8,5 +8,6 @@ export const siteConfig = {
   links: {
     github: "https://github.com/arocchet",
     discord: "https://discordapp.com/users/331333861340479488",
+    linkedin: "https://www.linkedin.com/in/adrien-rocchetti-4a047731a/",
   },
 };

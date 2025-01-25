@@ -1,6 +1,7 @@
 "use client";
 
 import { DrawerTest } from "@/components/drawer-school";
+import { DrawerDefinition } from "@/components/school-drawer";
 import React from "react";
 
 export default function SchoolPage() {
@@ -26,7 +27,7 @@ export default function SchoolPage() {
             <li><strong>Followed by two years of paid professional experience</strong>, working with one of our partner companies where I will apply the skills I’ve gained.</li>
           </ul>
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl">
-            How do we learn without professors or traditional courses? I will learn through the innovative <strong>01Edu platform</strong> – a peer-to-peer and <DrawerTest /> learning platform that has helped thousands of students worldwide become ready-to-work digital talents. By collaborating with other students on group projects, as well as improving my individual skills, I will acquire a complete set of development skills.
+            How do we learn without professors or traditional courses? I will learn through the innovative <strong>01Edu platform</strong> – a peer-to-peer and <DrawerDefinition/> learning platform that has helped thousands of students worldwide become ready-to-work digital talents. By collaborating with other students on group projects, as well as improving my individual skills, I will acquire a complete set of development skills.
           </p>
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl ">
             The 01Edu platform includes detailed instructions, support videos, and built-in features to teach everyone the basics of programming. The 01 community encourages the creation of collective intelligence. Study groups, chats, and collaborative workspaces are provided to foster support and teamwork.

@@ -1,10 +1,5 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { GithubIcon, DiscordIcon, SearchIcon, Logo } from "@/components/icons";
-import type { NavbarProps } from "@heroui/react";
-
 import React from "react";
 import {
   Navbar,
@@ -15,51 +10,50 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
   Link,
-  Button,
   Divider,
   cn,
+  NavbarProps,
 } from "@heroui/react";
+import { Logo } from "./icons";
+import { ThemeSwitch } from "./theme-switch";
 
 const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
   ({ classNames = {}, ...props }, ref) => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+    const handleLinkClick = () => {
+      setIsMenuOpen(false);
+    };
 
     return (
       <Navbar
         ref={ref}
         {...props}
         classNames={{
-          base: cn("border-default-100 bg-transparent", {
-            "bg-default-200/50 dark:bg-default-100/50": isMenuOpen,
-          }),
-          wrapper: "w-full justify-center",
-          item: "hidden md:flex",
-          ...classNames,
+          base: cn(
+            "w-full items-center justify-center backdrop-blur-xl backdrop-saturate-150 max-w-xs sm:max-w-md md:max-w-screen-sm mx-auto rounded-full px-1.5 pr-[18px] md:pr-1.5 py-[5px] top-12 shadow-[0_4px_15px_0_rgba(0,0,0,0.25)]",
+            {
+              "border-none backdrop-blur-xl": isMenuOpen,
+            }
+          ),
+          wrapper: "w-full max-w-[1024px] justify-between",
         }}
-        height="80px"
+        height="40px"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
       >
         {/* Left Content */}
         <NavbarBrand className="">
-          <div className="rounded-full">
+          <div className="rounded-full bg-background -ml-5">
             <Logo />
           </div>
-          <span className="ml-2 text-small font-medium text-default-foreground">
-            Adrien Rocchetti
-          </span>
+          <span className="ml-1 text-small font-medium ">Adrien</span>
         </NavbarBrand>
 
         {/* Center Content */}
-        <NavbarContent justify="center">
-          <NavbarItem
-          >
-            <Link
-
-              className="text-default-500 x"
-              href="/"
-              size="sm"
-            >
+        <NavbarContent className="hidden md:flex" justify="center">
+          <NavbarItem>
+            <Link className="text-default-500" href="/" size="sm">
               Home
             </Link>
           </NavbarItem>
@@ -81,109 +75,75 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
         </NavbarContent>
 
         {/* Right Content */}
-        <NavbarContent className="hidden md:flex" justify="end">
-          <NavbarItem className="ml-2 !flex gap-2">
-            <Link
-              isExternal
-              aria-label="Discord"
-              href={siteConfig.links.discord}
-            >
-              <DiscordIcon className="text-default-500" />
-            </Link>
-            <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-              <GithubIcon className="text-default-500" />
-            </Link>
+        <NavbarContent className="hidden md:flex mt-1" justify="end">
+          <NavbarItem>
             <ThemeSwitch />
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarMenuToggle className="text-default-400 md:hidden" />
+        {/* Moved NavbarMenuToggle to the right side */}
+        <NavbarContent justify="end" className="md:hidden -mr-5">
+          <ThemeSwitch />
+          <NavbarMenuToggle
+            className="text-default-400"
+            aria-label={
+              isMenuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+          />
+        </NavbarContent>
 
         <NavbarMenu
-          className="top-[calc(var(--navbar-height)_-_1px)] min-h-fit bg-default-200/50 pb-6 pt-10 shadow-medium backdrop-blur-md backdrop-saturate-150 dark:bg-default-100/50"
+          className="z-30 px-6 fixed inset-x-0 w-screen flex-col gap-2 bottom-0 top-[initial] max-h-fit rounded-t-2xl bg-default-200/50 pb-6 pt-6 shadow-medium backdrop-blur-md backdrop-saturate-150"
           motionProps={{
-            initial: { opacity: 0, y: -30 },
+            initial: { opacity: 0, y: 50 },
             animate: { opacity: 1, y: 0 },
-            exit: { opacity: 0, y: -20 },
+            exit: { opacity: 0, y: 50 },
             transition: {
+              duration: 0.3,
               ease: "easeInOut",
-              duration: 0.2,
             },
           }}
         >
-          <Divider className="opacity-50 " />
-          <NavbarMenuItem className="ml-2 !flex gap-2 justify-center">
-            <Link
-              isExternal
-              aria-label="Discord"
-              href={siteConfig.links.discord}
-              size="md"
-            >
-              <DiscordIcon className="text-default-500" />
-            </Link>
-            <Link
-              isExternal
-              aria-label="Github"
-              href={siteConfig.links.github}
-              size="md"
-            >
-              <GithubIcon className="text-default-500" />
-            </Link>
-            <ThemeSwitch />
-          </NavbarMenuItem>
-          <Divider className="opacity-50" />
-          <NavbarMenuItem
-           
-          >
-            <Link
-              aria-current="page"
-              className="text-default-500 justify-center flex"
-              href="/"
-              size="md"
-            >
-              Home
-            </Link>
-          </NavbarMenuItem>
-          <Divider className="opacity-50 " />
-
-          <NavbarMenuItem>
-            
-            <Link
-              className="mb-2 w-full text-default-500 justify-center"
-               aria-current="page"
-              href="/school"
-              size="md"
-            >
-              My School
-            </Link>
-
-            <Divider className="opacity-50" />
-          </NavbarMenuItem>
-
-          <NavbarMenuItem>
-            <Link
-              className="mb-2 w-full text-default-500 justify-center"
-              href="#"
-              size="md"
-            >
-              Projects
-            </Link>
-
-            <Divider className="opacity-50" />
-          </NavbarMenuItem>
-
-          <NavbarMenuItem>
-            <Link
-              className="mb-2 w-full text-default-500 justify-center"
-              href="#"
-              size="md"
-            >
-              About me
-            </Link>
-            <Divider className="opacity-50 " />
+          <NavbarMenuItem className="space-y-4">
+            <div className="flex flex-col space-y-2">
+              <Link
+                className="text-medium text-default-500 w-full py-2 flex justify-between items-center"
+                href="/"
+                size="md"
+                onClick={handleLinkClick}
+              >
+                Home
+              </Link>
+              <Divider className="opacity-50" />
+              <Link
+                className="text-medium text-default-500 w-full py-2"
+                href="/school"
+                size="md"
+                onClick={handleLinkClick}
+              >
+                My school
+              </Link>
+              <Divider className="opacity-50" />
+              <Link
+                className="text-medium text-default-500 w-full py-2"
+                href="/projects"
+                size="md"
+                onClick={handleLinkClick}
+              >
+                Projects
+              </Link>
+              <Divider className="opacity-50" />
+              <Link
+                className="text-medium text-default-500 w-full py-2"
+                href="/about"
+                size="md"
+                onClick={handleLinkClick}
+              >
+                About me
+              </Link>
+            </div>
           </NavbarMenuItem>
         </NavbarMenu>
-        
       </Navbar>
     );
   }

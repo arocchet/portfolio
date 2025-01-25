@@ -15,7 +15,7 @@ import {
   
     return (
       <>
-        <Button className="size-1  max-w-min text-default-500" onPress={onOpen}>gamified</Button>
+        <Button className="size-1 max-w-min text-default-500" onPress={onOpen}>gamified</Button>
         <Drawer
           isOpen={isOpen}
           motionProps={{

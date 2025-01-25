@@ -12,6 +12,7 @@ import {
   Tooltip,
 } from "@heroui/react";
 import { usePathname } from "next/navigation"; // Pour obtenir la route actuelle
+import { ThemeSwitch } from "./theme-switch";
 
 export function DebuggerButton() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -102,16 +103,12 @@ export function DebuggerButton() {
     return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1).toUpperCase()}`;
   };
 
-  // Si c'est en production, ne pas afficher le bouton
-  if (process.env.NODE_ENV === "development") {
-    return null;
-  }
-
+  // Si c'est en production, ne pas afficher le bouto
   return (
     <>
       {/* Le bouton flottant en bas à gauche */}
       <Button
-        className="fixed bottom-4 right-10 shadow-md p-0 h-min min-w-min dark:bg-gray-80 light:bg-white-900"
+        className="fixed bottom-4 right-10 shadow-md p-0 h-min min-w-min dark:bg-gray-80 light:bg-white-900 z-50"
         variant="shadow"
         onClick={onOpen}
         radius="full"
@@ -163,15 +160,12 @@ export function DebuggerButton() {
 
             {/* Informations sur la taille de l'écran */}
             <div className="mb-4">
-              <h4 className="text-lg font-medium">Screen Size:</h4>
-              <p>
-                {screenSize.width} x {screenSize.height}
-              </p>
+              <h4 className="text-lg font-medium border-b-small">Screen Size: {screenSize.width} x {screenSize.height}</h4>
             </div>
 
             {/* Affichage des couleurs Tailwind */}
             <div className="mb-4">
-              <h4 className="text-lg font-medium">Colors:</h4>
+              <h4 className="text-lg font-medium mb-1">Colors:</h4>
               <div className="flex flex-wrap gap-2">
                 {tailwindColors.map((colorClass, index) => (
                   <Tooltip content={colorClass} key={index}>
@@ -188,9 +182,13 @@ export function DebuggerButton() {
 
             {/* Affichage de la route actuelle */}
             <div className="mb-4">
-              <h4 className="text-lg font-medium">Current Route:</h4>
-              <p>{pathname}</p>
+              <h4 className="text-lg font-medium border-b-small">Current Route: {pathname}</h4>
             </div>
+            <div className="mb-4">
+            <ThemeSwitch className=""/>
+              
+            </div>
+            
           </DrawerBody>
           <DrawerFooter>
             <Button color="danger" variant="light" onPress={onOpenChange}>
