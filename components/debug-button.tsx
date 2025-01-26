@@ -131,6 +131,7 @@ export function DebuggerButton() {
       </Button>
       {/* Le Drawer contenant les informations de débogage */}
       <Drawer
+        backdrop="blur"
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         motionProps={{
@@ -192,7 +193,7 @@ export function DebuggerButton() {
             {/* Affichage de la route actuelle */}
             <div className="mb-4">
               <h4 className="text-lg font-medium border-b-small">
-                Current Route: {pathname}
+                Current Route: {window.location.origin}{pathname}
               </h4>
             </div>
             <div className="mb-4">
