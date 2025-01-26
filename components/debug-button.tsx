@@ -17,9 +17,10 @@ import { ThemeSwitch } from "./theme-switch";
 export function DebuggerButton() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [screenSize, setScreenSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    height: typeof window !== "undefined" ? window.innerHeight : 0,
   });
+  const [fullUrl, setFullUrl] = useState("");
   const [tailwindColors, _] = useState([
     "bg-gray-90",
     "bg-gray-80",
@@ -67,16 +68,20 @@ export function DebuggerButton() {
   const [showAlert, setShowAlert] = useState(false); // Etat pour afficher l'alerte
 
   useEffect(() => {
-    const handleResize = () => {
-      setScreenSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setScreenSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+        setFullUrl(`${window.location.origin}`);
+      };
 
-    window.addEventListener("resize", handleResize);
+      handleResize(); // Set initial size
+      window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   const handleColorClick = (colorClass: string) => {
@@ -156,7 +161,6 @@ export function DebuggerButton() {
                 onClose={() => setShowAlert(false)}
                 color="success"
                 className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-opacity-90 px-4 py-2 rounded-md shadow-md max-w-xs "
-                
               >
                 <div className="flex items-center ">
                   <span>Color copied to clipboard!</span>
@@ -193,7 +197,7 @@ export function DebuggerButton() {
             {/* Affichage de la route actuelle */}
             <div className="mb-4">
               <h4 className="text-lg font-medium border-b-small">
-                Current Route: {window.location.origin}{pathname}
+              Current Route: {fullUrl}{pathname}
               </h4>
             </div>
             <div className="mb-4">
