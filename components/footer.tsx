@@ -42,7 +42,7 @@ export const Footer = ({ className }: { className?: string }) => {
 
         {/* Footer Text */}
         <p className="text-center text-sm text-gray-400 opacity-70">
-          © 2025 My Website. All Rights Reserved.
+          © 2025 Adrien Rocchetti. All Rights Reserved.
         </p>
       </div>
     </footer>
