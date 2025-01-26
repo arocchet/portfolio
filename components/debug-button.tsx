@@ -108,6 +108,7 @@ export function DebuggerButton() {
     return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1).toUpperCase()}`;
   };
 
+  if (process.env.NODE_ENV === "production") return null;
   // Si c'est en production, ne pas afficher le bouto
   return (
     <>
