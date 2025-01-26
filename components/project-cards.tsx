@@ -1,12 +1,13 @@
 import {Card, CardHeader, CardFooter, Image, Button} from "@heroui/react";
+import tonImage from "@/public/7D919A36-5B06-4525-8D55-06E86565EFF6.png"
 
 export const ProjectCards = () => {
   return (
-    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
+    <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8 mt-5">
       <Card className="col-span-12 sm:col-span-4 h-[300px]">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-          <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
-          <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
+          <p className="text-tiny text-white-90 uppercase font-bold">What to watch</p>
+          <h4 className="text-white-90 font-medium text-large">Stream the Acme event</h4>
         </CardHeader>
         <Image
           removeWrapper
@@ -17,8 +18,8 @@ export const ProjectCards = () => {
       </Card>
       <Card className="col-span-12 sm:col-span-4 h-[300px]">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-          <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
-          <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
+          <p className="text-tiny text-white-90 uppercase font-bold">Plant a tree</p>
+          <h4 className="text-white-90 font-medium text-large">Contribute to the planet</h4>
         </CardHeader>
         <Image
           removeWrapper
@@ -29,19 +30,20 @@ export const ProjectCards = () => {
       </Card>
       <Card className="col-span-12 sm:col-span-4 h-[300px]">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-          <p className="text-tiny text-white/60 uppercase font-bold">Supercharged</p>
-          <h4 className="text-white font-medium text-large">Creates beauty like a beast</h4>
+          <p className="text-tiny text-white-90 uppercase font-bold">Supercharged</p>
+          <h4 className="text-white-90 font-medium text-large">Creates beauty like a beast</h4>
         </CardHeader>
         <Image
           removeWrapper
           alt="Card background"
           className="z-0 w-full h-full object-cover"
-          src="https://heroui.com/images/card-example-2.jpeg"
+          src={tonImage.src}
         />
       </Card>
+      {/* 
       <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
         <CardHeader className="absolute z-10 top-1 flex-col items-start">
-          <p className="text-tiny text-white/60 uppercase font-bold">New</p>
+          <p className="text-tiny text-white-90 uppercase font-bold">New</p>
           <h4 className="text-black font-medium text-2xl">Acme camera</h4>
         </CardHeader>
         <Image
@@ -62,8 +64,8 @@ export const ProjectCards = () => {
       </Card>
       <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
         <CardHeader className="absolute z-10 top-1 flex-col items-start">
-          <p className="text-tiny text-white/60 uppercase font-bold">Your day your way</p>
-          <h4 className="text-white/90 font-medium text-xl">Your checklist for better sleep</h4>
+          <p className="text-tiny text-white-90 uppercase font-bold">Your day your way</p>
+          <h4 className="text-white-90/90 font-medium text-xl">Your checklist for better sleep</h4>
         </CardHeader>
         <Image
           removeWrapper
@@ -79,8 +81,8 @@ export const ProjectCards = () => {
               src="https://heroui.com/images/breathing-app-icon.jpeg"
             />
             <div className="flex flex-col">
-              <p className="text-tiny text-white/60">Breathing App</p>
-              <p className="text-tiny text-white/60">Get a good night&#39;s sleep.</p>
+              <p className="text-tiny text-white-90">Breathing App</p>
+              <p className="text-tiny text-white-90">Get a good night&#39;s sleep.</p>
             </div>
           </div>
           <Button radius="full" size="sm">
@@ -88,6 +90,7 @@ export const ProjectCards = () => {
           </Button>
         </CardFooter>
       </Card>
+      */}
     </div>
   );
 }

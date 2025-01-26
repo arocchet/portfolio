@@ -1,5 +1,8 @@
 "use client";
 
+import level from "@/public/7D919A36-5B06-4525-8D55-06E86565EFF6.png"
+import ex from "@/public/C898A6DF-D65F-43E8-AD3D-FDCE9B0C3B58.png"
+
 import {
   Drawer,
   DrawerContent,
@@ -17,7 +20,8 @@ export const DrawerDefinition = () => {
 
   return (
     <>
-      <Button className="size-1 max-w-min text-default-500 bg-default-100" onPress={onOpen}>
+      <Button className="size-0.5 text-default-600 bg-default-100 text-small font-normal" onPress={onOpen} radius="full"
+      >
         gamified
       </Button>
       <Drawer
@@ -81,7 +85,7 @@ export const DrawerDefinition = () => {
                     alt=""
                     className="object-cover object-center w-full h-full transition-transform duration-300 ease-in-out hover:scale-110"
                     height={300}
-                    src="https://cdn.discordapp.com/attachments/1251991416222253076/1332836790217736222/0E454545-D9DB-4FA3-8081-9E7A5E88FA3F.png?ex=6796b47d&is=679562fd&hm=26b1f7f8dd81a129c16575a8005a93d92bff000a043556c8445a0ee50484fe50&"
+                    src={level.src}
                   />
                 </div>
                 <div className="flex flex-col gap-2 py-4">
@@ -129,7 +133,7 @@ export const DrawerDefinition = () => {
                             alt=""
                             className="object-cover object-center w-full h-full transition-transform duration-300 ease-in-out hover:scale-110"
                             height={180}
-                            src="https://cdn.discordapp.com/attachments/1251991416222253076/1333040972900204615/C898A6DF-D65F-43E8-AD3D-FDCE9B0C3B58.png?ex=679772a6&is=67962126&hm=057f1214e011ae6efb0681a8156e022221f3420ec4e0fc9342b1bc42b37bc5a8&"
+                            src={ex.src}
                           />
                         </div>
                       </div>

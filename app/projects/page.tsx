@@ -1,3 +1,7 @@
+"use client"
+
+import { ProjectCards } from "@/components/project-cards";
+
 export default function Projects() {
   return (
     <div className="relative flex h-full w-full flex-col bg-background dark:bg-black-90 light:bg-white-90">
