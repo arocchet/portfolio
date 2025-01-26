@@ -48,7 +48,7 @@ export default function RootLayout({
             className="absolute inset-0 -z-10"
             quantity={110}
             ease={80}
-
+staticity={10}
           />
           <div className="relative flex flex-col h-screen overflow-auto">
             <main className="container mx-auto max-w-7xl px-6 pt-2 flex-grow flex flex-col justify-start items-center">
