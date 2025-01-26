@@ -6,11 +6,11 @@ import { Icon } from "@iconify/react";
 
 export default function Home() {
   return (
-    <div className="relative flex h-full w-full flex-col dark:bg-black-90 bg-white-90">
+    <div className="relative flex h-full w-full flex-col dark:bg-black-90">
       <main className="container mx-auto flex flex-col items-center justify-center px-8 py-16 sm:py-24">
         <section className="z-20 flex flex-col items-center justify-center gap-[18px] sm:gap-6">
           <Button
-            className="dark:bg-gray-80 bg-white-10 h-9 overflow-hidden shadow-[0_4px_15px_0_rgba(0,0,0,0.25)] px-[18px] py-2 text-small font-normal leading-5 "
+            className="dark:bg-gray-80 bg-white-5 h-9 overflow-hidden shadow-[0_4px_15px_0_rgba(0,0,0,0.25)] px-[18px] py-2 text-small font-normal leading-5 "
             endContent={
               <Icon
                 className="flex-none outline-none [&>path]:stroke-[2] "
