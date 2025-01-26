@@ -44,12 +44,11 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen overflow-auto">
-            <main className="container mx-auto max-w-7xl pt-5 px-6 flex-grow">
-              <BasicNavbar className="dark:bg-gray-90 light:bg-white-90" />
-              {children}
-              <Footer/>
-              {/*<DebuggerButton />*/}
-            </main>
+          <main className="container mx-auto max-w-7xl px-6 pt-2 flex-grow flex flex-col justify-start items-center">
+  <BasicNavbar className="dark:bg-gray-90 light:bg-white-90 mb-2" />
+  {children}
+  <Footer className="mt-auto w-full" />
+</main>
           </div>
         </Providers>
       </body>

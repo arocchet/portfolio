@@ -4,9 +4,9 @@ import { Link } from "@heroui/react"; // Utilisation du composant Link de HeroUI
 import { FaDiscord, FaGithub,FaLinkedin   } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 
-export function Footer() {
+export const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer className="text-white py-8 -mt-16">
+    <footer className={`text-white py-4 ${className}`}>
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex gap-6 mb-4">
           {/* Discord Link */}
