@@ -47,7 +47,7 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
           <div className="rounded-full bg-background -ml-5">
             <Logo />
           </div>
-          <span className="ml-1 text-small font-medium ">Adrien R.</span>
+          <span className="ml-1 text-small font-medium text-default-700">Adrien R.</span>
         </NavbarBrand>
 
         {/* Center Content */}
@@ -63,12 +63,12 @@ const BasicNavbar = React.forwardRef<HTMLElement, NavbarProps>(
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link className="text-default-500" href="#" size="sm">
+            <Link className="text-default-500" href="/projects" size="sm">
               Projects
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link className="text-default-500" href="#" size="sm">
+            <Link className="text-default-500" href="/about" size="sm">
               About me
             </Link>
           </NavbarItem>

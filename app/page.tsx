@@ -6,9 +6,8 @@ import { Icon } from "@iconify/react";
 
 export default function Home() {
   return (
-    <div className="relative flex min-h-[70vh] w-full flex-col overflow-y-hidden dark:bg-black-90 light:bg-white-90 -mt-16">
-      {" "}
-      <main className="container mx-auto flex flex-1 flex-col items-center overflow-hidden justify-end px-8">
+    <div className="relative flex h-full w-full flex-col bg-background dark:bg-black-90 light:bg-white-90">
+      <main className="container mx-auto flex flex-col items-center justify-center px-8 py-16 sm:py-24">
         <section className="z-20 flex flex-col items-center justify-center gap-[18px] sm:gap-6">
           <Button
             className="h-9 overflow-hidden border-1 border-default-50 dark:bg-gray-80
@@ -32,7 +31,7 @@ export default function Home() {
             </Link>
           </Button>
           <div className="text-center text-[clamp(40px,10vw,44px)] font-bold leading-[1.2] tracking-tighter sm:text-[64px]">
-            <div className="bg-hero-section-title bg-clip-text">
+            <div className="bg-hero-section-title bg-clip-text text-default-800">
               Welcome to my <br /> Fullstack dev portfolio.
             </div>
           </div>

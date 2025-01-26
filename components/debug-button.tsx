@@ -108,21 +108,27 @@ export function DebuggerButton() {
     <>
       {/* Le bouton flottant en bas à gauche */}
       <Button
-        className="fixed bottom-4 right-10 shadow-md p-0 h-min min-w-min dark:bg-gray-80 light:bg-white-900 z-50"
+        className="fixed bottom-4 left-4 p-0 h-min min-w-min bg-transparent text-default-600 z-[9999]" // Increased z-index
         variant="shadow"
         onClick={onOpen}
         radius="full"
       >
-        <svg role="img" width="30px" viewBox="0 0 18 18" aria-label="icon">
-          <g fill="white">
-            <path
-              d="M9 0C4.02946 0 0 4.02946 0 9C0 13.9705 4.02946 18 9 18C13.9705 18 18 13.9705 18 9C18 4.02946 13.9718 0 9 0ZM9 16.6334C4.78429 16.6334 1.36659 13.2157 1.36659 9C1.36659 4.78429 4.78429 1.36659 9 1.36659C13.2157 1.36659 16.6334 4.78429 16.6334 9C16.6334 13.2157 13.2157 16.6334 9 16.6334ZM9.72646 5.23201C9.72646 5.6304 9.44648 5.95971 8.9815 5.95971C8.55722 5.95971 8.27354 5.6304 8.27354 5.23201C8.27354 4.82993 8.57325 4.50308 9.00247 4.50308C9.43168 4.50308 9.724 4.82253 9.72646 5.23201ZM8.41661 13.4969V7.05372H9.58216V13.4969H8.41661Z"
-              fill="var(--neutral)"
-            ></path>
-          </g>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
         </svg>
       </Button>
-
       {/* Le Drawer contenant les informations de débogage */}
       <Drawer
         isOpen={isOpen}
@@ -149,6 +155,7 @@ export function DebuggerButton() {
                 onClose={() => setShowAlert(false)}
                 color="success"
                 className="fixed top-16 left-1/2 transform -translate-x-1/2 z-50 bg-opacity-90 px-4 py-2 rounded-md shadow-md max-w-xs "
+                
               >
                 <div className="flex items-center ">
                   <span>Color copied to clipboard!</span>
@@ -160,7 +167,9 @@ export function DebuggerButton() {
 
             {/* Informations sur la taille de l'écran */}
             <div className="mb-4">
-              <h4 className="text-lg font-medium border-b-small">Screen Size: {screenSize.width} x {screenSize.height}</h4>
+              <h4 className="text-lg font-medium border-b-small">
+                Screen Size: {screenSize.width} x {screenSize.height}
+              </h4>
             </div>
 
             {/* Affichage des couleurs Tailwind */}
@@ -182,13 +191,13 @@ export function DebuggerButton() {
 
             {/* Affichage de la route actuelle */}
             <div className="mb-4">
-              <h4 className="text-lg font-medium border-b-small">Current Route: {pathname}</h4>
+              <h4 className="text-lg font-medium border-b-small">
+                Current Route: {pathname}
+              </h4>
             </div>
             <div className="mb-4">
-            <ThemeSwitch className=""/>
-              
+              <ThemeSwitch className="" />
             </div>
-            
           </DrawerBody>
           <DrawerFooter>
             <Button color="danger" variant="light" onPress={onOpenChange}>
