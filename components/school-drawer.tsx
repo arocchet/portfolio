@@ -17,7 +17,7 @@ export const DrawerDefinition = () => {
 
   return (
     <>
-      <Button className="size-1 max-w-min text-default-500" onPress={onOpen}>
+      <Button className="size-1 max-w-min text-default-500 bg-default-100" onPress={onOpen}>
         gamified
       </Button>
       <Drawer
@@ -26,7 +26,7 @@ export const DrawerDefinition = () => {
         classNames={{
           base: "data-[placement=right]:sm:m-2 data-[placement=left]:sm:m-2  rounded-medium",
         }}
-        size={"sm"} 
+        size={"sm"}
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         motionProps={{
@@ -118,22 +118,26 @@ export const DrawerDefinition = () => {
                       </span>
                       <div className="text-medium text-default-500 flex flex-col gap-2">
                         <p>
-                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nostrum necessitatibus, assumenda amet sint doloribus voluptates odio. Ipsum explicabo placeat quaerat mollitia, porro nostrum fugiat amet nobis suscipit rerum tempore.
+                          Each exercise rewards us with experience, expressed in
+                          Byte, KB, etc., and a percentage progression in
+                          certain areas we explore during the exercise.
                         </p>
-                        <p>
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident eaque architecto, quidem, nihil accusantium dolorem explicabo vel quis enim ea ullam veniam excepturi deserunt quae, quos cum laborum! Deserunt, non?
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, corporis sapiente. Neque repellendus qui pariatur nisi similique autem dolores nemo, blanditiis nostrum, error vero ad dolore, hic dolor soluta id.
-                        </p>
+                        <div className="flex w-full justify-center items-center pt-4">
+                          <Image
+                            isBlurred
+                            isZoomed
+                            alt=""
+                            className="object-cover object-center w-full h-full transition-transform duration-300 ease-in-out hover:scale-110"
+                            height={180}
+                            src="https://cdn.discordapp.com/attachments/1251991416222253076/1333040972900204615/C898A6DF-D65F-43E8-AD3D-FDCE9B0C3B58.png?ex=679772a6&is=67962126&hm=057f1214e011ae6efb0681a8156e022221f3420ec4e0fc9342b1bc42b37bc5a8&"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </DrawerBody>
-              <DrawerFooter className="flex flex-col gap-1">
-                
-              </DrawerFooter>
+              <DrawerFooter className="flex flex-col gap-1"></DrawerFooter>
             </>
           )}
         </DrawerContent>
