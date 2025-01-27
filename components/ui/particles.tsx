@@ -131,7 +131,7 @@ export const Particles: React.FC<ParticlesProps> = ({
   }, [color]);
 
   useEffect(() => {
-    setColor(resolvedTheme === "dark" ? "#ffffff" : "#000000");
+    setColor(resolvedTheme === "dark" ? "#ffffff" : "#1a191c");
   }, [resolvedTheme]);
 
   useEffect(() => {

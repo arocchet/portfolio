@@ -1,6 +1,6 @@
 "use client";
 
-import level from "@/public/7D919A36-5B06-4525-8D55-06E86565EFF6.png"
+import level from "@/public/0E454545-D9DB-4FA3-8081-9E7A5E88FA3F.png"
 import ex from "@/public/C898A6DF-D65F-43E8-AD3D-FDCE9B0C3B58.png"
 
 import {
@@ -20,7 +20,7 @@ export const DrawerDefinition = () => {
 
   return (
     <>
-      <Button className="size-0.5 text-default-600 bg-default-100 text-small font-normal" onPress={onOpen} radius="full"
+      <Button className="size-0.5 text-default-600 bg-default-100 text-small font-normal border-1 border-default-300" onPress={onOpen} radius="full"
       >
         gamified
       </Button>

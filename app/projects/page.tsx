@@ -10,6 +10,7 @@ export default function Projects() {
           <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight text-default-700">
             My projects...
           </h1>
+          <ProjectCards/>
         </section>
       </main>
     </div>
