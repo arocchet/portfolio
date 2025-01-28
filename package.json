@@ -9,6 +9,8 @@
   "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
  },
  "dependencies": {
+  "@emotion/react": "^11.14.0",
+  "@emotion/styled": "^11.14.0",
   "@heroui/button": "2.2.9",
   "@heroui/card": "^2.2.10",
   "@heroui/code": "2.2.6",
@@ -22,6 +24,9 @@
   "@heroui/switch": "2.2.8",
   "@heroui/system": "2.4.6",
   "@heroui/theme": "2.4.5",
+  "@mui/icons-material": "^6.4.1",
+  "@mui/lab": "^6.0.0-beta.24",
+  "@mui/material": "^6.4.1",
   "@react-aria/interactions": "^3.23.0",
   "@react-aria/ssr": "3.9.7",
   "@react-aria/visually-hidden": "3.8.18",
