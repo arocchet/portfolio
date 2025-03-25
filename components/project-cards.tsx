@@ -38,7 +38,7 @@ const projects: Project[] = [
     description:
       "NextJS application built with Capacitor to create a native mobile experience from a web application.",
     imageSrc: "/78C7F679-A1DC-49F8-9756-AB69F1511718.png",
-    technologies: ["React", "NextJS", "Express", "Capacitor", "TypeScript", "Tailwind CSS",],
+    technologies: ["React", "NextJS", "Express", "Capacitor", "TypeScript", "Tailwind CSS", ],
     featured: true,
     details: false,
   },
@@ -49,7 +49,7 @@ const projects: Project[] = [
     description:
       "My school's GraphQL API, enabling efficient data management and optimized queries.",
     imageSrc: "/73B2F88B-C0DC-495A-A00D-5E1EFEEDFB45.png",
-    technologies: ["React", "NextJS", "GraphQL", "TypeScript", "Tailwind CSS",],
+    technologies: ["React", "NextJS", "GraphQL", "TypeScript", "Tailwind CSS", "Vercel"],
     demoUrl: "https://graphql-git-main-adridri7s-projects.vercel.app/",
     githubUrl: "https://github.com/arocchet/graphql",
     featured: false,
@@ -90,7 +90,7 @@ export function ProjectSection() {
 
   return (
     <section className="w-full py-12 space-y-8">
-      <div className="container px-4 md:px-6">
+      <div className="container">
         <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:items-center">
           <div>
             <h2 className="text-3xl font-bold tracking-tight">My Projects</h2>
