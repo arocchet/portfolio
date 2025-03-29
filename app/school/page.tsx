@@ -33,7 +33,7 @@ export default function SchoolPage() {
             After that..
           </h1>
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl">
-            After completing the first 18 months of the general curriculum, I have the opportunity during the final 6 months to specialize in a specific application domain and acquire specialized skills. I can choose to specialize in fields such as Artificial Intelligence, Video Game Development, Blockchain, Cybersecurity, DevOps, UX/UI, or even Mobile and Web Application Development.
+            After completing the first 18 months of the general curriculum, I have the opportunity during the final 18 months to specialize in a specific application domain and acquire specialized skills. I can choose to specialize in fields such as Artificial Intelligence, Video Game Development, Blockchain, Cybersecurity, DevOps, UX/UI, or even Mobile and Web Application Development.
           </p>
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl">
           Then, I’ll have the chance to take a certification exam, which will earn me an RNCP Level 6 title, officially recognized by the French government. This title will validate my skills and expertise in the field I’ve specialized in, giving me valuable professional recognition. For more details about the RNCP title, You can check the official page <Tooltip content={"PT - Application Developer Designer"}><Link href={"https://www.francecompetences.fr/recherche/rncp/37873/"} className="hover:text-gray-10 border-b-1 border-gray-50">here</Link></Tooltip>.</p>
