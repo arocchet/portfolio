@@ -6,7 +6,6 @@ import IconCloud from "@/components/ui/cloud";
 const slugs = [
   "typescript",
   "javascript",
-  "dart",
   "react",
   "go",
   "html5",
@@ -19,9 +18,15 @@ const slugs = [
   "docker",
   "git",
   "github",
-  "visualstudiocode",
+  "gitlab",
   "gitea",
-  "figma",
+  "linux",
+  "tailwindcss", 
+  "graphql",
+  "gnubash",
+  "dotnet",
+  "blazor"
+  
 ];
 
 export default function AboutPage() {
@@ -39,9 +44,7 @@ export default function AboutPage() {
             learn. "
           </p>
           <p className="text-lg sm:text-xl text-default-500 max-w-3xl">
-            I am currently looking for an apprenticeship in development. I am
-            motivated and open to all opportunities to strengthen my skills and
-            contribute to innovative projects.{" "}
+            I am now on a work-study program at Crédit Agricole Bank.{" "}
           </p>
           <h1 className="text-center text-4xl sm:text-5xl font-bold leading-tight text-default-700">
             Education
