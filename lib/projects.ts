@@ -172,7 +172,7 @@ export const projects: Project[] = [
         title: "Projets Zone01",
         category: "FORMATION · COLLECTION DE PROJETS",
         description:
-          "L’ensemble des projets que j’ai réalisés pendant mon cursus à Zone01 Rouen Normandie : algorithmique, développement et travail entre pairs. Je poursuis actuellement la branche Develop.",
+          "L’ensemble des projets que j’ai réalisés pendant mon cursus à Zone01 Rouen Normandie : algorithmique, développement et travail entre pairs. Je poursuis actuellement la branche DevOps.",
         detail:
           "Cette collection regroupe les projets réalisés tout au long de mon cursus à Zone01 Rouen Normandie. Des fondamentaux de la programmation au développement d’applications, chaque projet est une occasion de concevoir, expérimenter, collaborer et progresser grâce aux audits entre pairs. La branche Develop est actuellement en cours.",
       },
@@ -180,7 +180,7 @@ export const projects: Project[] = [
         title: "Zone01 projects",
         category: "EDUCATION · PROJECT COLLECTION",
         description:
-          "The projects I have completed during my studies at Zone01 Rouen Normandy: algorithms, development and peer collaboration. I am currently working through the Develop branch.",
+          "The projects I have completed during my studies at Zone01 Rouen Normandy: algorithms, development and peer collaboration. I am currently working through the DevOps branch.",
         detail:
           "This collection brings together the projects completed throughout my studies at Zone01 Rouen Normandy. From programming fundamentals to application development, each project is an opportunity to design, experiment, collaborate and improve through peer reviews. The Develop branch is currently in progress.",
       },
