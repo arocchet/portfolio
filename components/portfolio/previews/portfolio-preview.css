@@ -1,0 +1,133 @@
+.project-visual:has(.portfolio-preview) {
+  height: auto;
+}
+.project-visual .portfolio-preview,
+.project-render-expanded .portfolio-preview {
+  position: relative;
+  top: 0;
+  height: auto;
+  padding: 6px;
+  background: var(--bgLevel2);
+  color: var(--textNeutral);
+}
+.portfolio-preview .scaled-preview {
+  height: auto;
+  aspect-ratio: 1440 / 920;
+}
+.portfolio-render {
+  width: 1440px;
+  height: 920px;
+  background: var(--bgLevel1);
+  overflow: hidden;
+  text-align: left;
+}
+.portfolio-render-header {
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  border-bottom: 1px solid var(--detailMinimal);
+}
+.portfolio-render .wordmark {
+  font-size: 25px;
+  letter-spacing: -1.8px;
+}
+.portfolio-render-nav,
+.portfolio-render-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 12px;
+  color: var(--textMinimal);
+}
+.portfolio-render-nav span {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.portfolio-render-nav small {
+  font: 9px var(--font-mono);
+  color: var(--primary);
+}
+.portfolio-render-controls {
+  gap: 14px;
+  font-size: 10px;
+}
+.portfolio-render-controls > svg:first-child {
+  color: var(--yellow);
+}
+.portfolio-render-controls .portfolio-preview-moon,
+.dark .portfolio-render-controls .portfolio-preview-sun {
+  display: none;
+}
+.dark .portfolio-render-controls .portfolio-preview-moon {
+  display: block;
+}
+.portfolio-render .hero {
+  height: 760px;
+  min-height: 0;
+  max-width: none;
+  padding: 65px 80px 45px;
+}
+.portfolio-render .hero-kicker {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+}
+.portfolio-render .hero-main {
+  display: block;
+  padding: 30px 0;
+}
+.portfolio-render .hero h1 {
+  font-size: 86px;
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+}
+.portfolio-render .hero-art.architecture {
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: 390px;
+  height: 390px;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  opacity: 1;
+}
+.portfolio-render .app-node-title {
+  font-size: 14px;
+}
+.portfolio-render .app-node-stack {
+  font-size: 10px;
+}
+.portfolio-render .hero-bottom {
+  display: flex;
+  gap: 40px;
+}
+.portfolio-render .hero-profile {
+  max-width: 480px;
+}
+.portfolio-render .hero-profile p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.portfolio-render .primary-link {
+  font-size: 12px;
+  padding: 17px 22px;
+}
+.portfolio-render .hero-location {
+  margin: 0;
+  align-items: end;
+  font-size: 10px;
+  gap: 30px;
+}
+.portfolio-render .scroll-cue {
+  font-size: 9px;
+}
+.portfolio-render-ribbon {
+  height: 72px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-block: 1px solid var(--detailMinimal);
+  background: var(--bgLevel2);
+}

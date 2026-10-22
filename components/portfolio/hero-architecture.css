@@ -1,0 +1,77 @@
+.architecture {
+  background-image: radial-gradient(
+    var(--detailMinimal) 0.8px,
+    transparent 0.8px
+  );
+  background-size: 18px 18px;
+}
+.application-diagram {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-sans), sans-serif;
+}
+.application-caption {
+  fill: var(--textMinimal);
+  font: 9px var(--font-mono);
+  letter-spacing: 0.5px;
+}
+.application-deployment {
+  fill: var(--textNeutral);
+  font: 10px var(--font-mono);
+}
+.app-node rect {
+  fill: var(--bgLevel1);
+  stroke: var(--detailMinimal);
+}
+.app-node circle {
+  fill: var(--primary);
+}
+.app-node-accent rect {
+  stroke: var(--primary);
+}
+.app-node-title {
+  fill: var(--textNeutral);
+  font-size: 14px;
+  font-weight: 550;
+}
+.app-node-stack {
+  fill: var(--textMinimal);
+  font: 10px var(--font-mono);
+}
+.application-links path {
+  stroke: var(--detailMinimal);
+  stroke-width: 1.3;
+}
+.application-traffic path {
+  stroke: var(--primary);
+  stroke-width: 1.3;
+  stroke-dasharray: 5 30;
+}
+.application-divider {
+  stroke: var(--detailMinimal);
+}
+@media (max-width: 700px) {
+  .application-diagram .app-node-title {
+    font-size: 16px;
+  }
+  .application-diagram .app-node-stack {
+    font-size: 13px;
+  }
+  .hero-main {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding-block: 26px 22px;
+  }
+  .hero-art.architecture {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 420 / 400;
+    max-width: 360px;
+    max-height: none;
+    opacity: 1;
+    margin-inline: auto;
+  }
+}

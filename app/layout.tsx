@@ -1,65 +1,48 @@
-import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
-import clsx from "clsx";
+import { Geist, Geist_Mono } from "next/font/google"
 
-import { Providers } from "./providers";
-import BasicNavbar from "@/components/navbar";
-import { DebuggerButton } from "@/components/debug-button";
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { Footer } from "@/components/footer";
-import { Particles } from "@/components/ui/particles";
+import "./globals.css"
+import "./scrollbars.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import ScrollResetProvider from "@/components/custom/scroll-reset-provider"
+import { cn } from "@/lib/utils"
+import type { Metadata } from "next"
+import { LocaleProvider } from "@/components/locale-provider"
+import { MotionProvider } from "@/components/motion-provider"
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
+  title: "Adrien Rocchetti. — Développeur full-stack",
+  description:
+    "Le portfolio d’Adrien Rocchetti. : développement full-stack, projets et parcours à Zone01 Rouen Normandie. Une expérience interactive au fil du scroll.",
+}
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black-90" },
-  ],
-};
+const fontSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
+
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <head />
-      <body
-        className={clsx(
-          "font-sans antialiased",
-          fontSans.variable,
-          "dark:bg-black-90" // Déplace la classe bg ici
-        )}
-      >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <Particles
-            className="absolute inset-0 -z-10"
-            quantity={110}
-            ease={80}
-staticity={10}
-          />
-          <div className="relative flex flex-col h-screen overflow-auto">
-            <main className="container mx-auto max-w-7xl px-6 pt-2 flex-grow flex flex-col justify-start items-center">
-              <BasicNavbar className="mb-2" />
-              {children}
-              <DebuggerButton />
-              <Footer className="mt-auto w-full" />
-            </main>
-          </div>
-        </Providers>
+    <html
+      lang="fr"
+      suppressHydrationWarning
+      className={cn("antialiased", fontSans.variable, geistMono.variable)}
+    >
+      {/* Browser extensions can inject body attributes before React hydrates. */}
+      <body suppressHydrationWarning>
+        <ThemeProvider defaultTheme="dark">
+          <LocaleProvider>
+            <MotionProvider>
+              <ScrollResetProvider>{children}</ScrollResetProvider>
+            </MotionProvider>
+          </LocaleProvider>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

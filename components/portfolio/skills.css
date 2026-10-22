@@ -1,0 +1,23 @@
+.skill-description {
+  color: var(--textMinimal);
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0 0 24px;
+}
+@media (min-width: 701px) and (max-width: 1199px) {
+  .skills-section .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .skills-grid > .skill-group:nth-child(n + 3) {
+    border-top: 1px solid var(--detailMinimal);
+  }
+  .skills-grid > .skill-group:nth-child(3) {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .skills-section .skills-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
