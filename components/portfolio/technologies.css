@@ -1,0 +1,80 @@
+.technology-icon {
+  flex-shrink: 0;
+  color: var(--brand-color, currentColor);
+  vertical-align: middle;
+}
+.stack-ribbon {
+  border-block: 1px solid var(--detailMinimal);
+  margin-top: 0;
+  background: var(--bgLevel2);
+  padding: 0;
+  overflow: visible;
+}
+.technology-ribbon {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  list-style: none;
+  padding: 0 6%;
+  margin: 0;
+}
+.technology-ribbon > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90px;
+}
+.ribbon-logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.ribbon-logo:hover {
+  transform: translateY(-3px);
+}
+.technology-tooltip {
+  position: absolute;
+  z-index: 3;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid var(--detailMinimal);
+  background: var(--bgLevel1);
+  color: var(--textNeutral);
+  padding: 6px 9px;
+  font: 10px var(--font-mono);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.ribbon-logo:hover .technology-tooltip {
+  opacity: 1;
+}
+.technology-list > li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.skill-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 20px;
+}
+.skill-technologies .technology-icon {
+  width: 21px;
+  height: 21px;
+}
+@media (max-width: 700px) {
+  .technology-ribbon {
+    padding: 0 3%;
+  }
+  .technology-ribbon > li {
+    min-height: 74px;
+  }
+  .ribbon-logo > .technology-icon {
+    width: 26px;
+    height: 26px;
+  }
+}

@@ -1,0 +1,49 @@
+.project-image {
+  background: var(--bgLevel2);
+}
+
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+  padding: 7px 10px;
+  border: 1px solid var(--detailMinimal);
+  color: var(--primary);
+  font-size: 9px;
+}
+
+.project-status::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.project-dialog > .project-status {
+  margin-top: 20px;
+}
+
+.project-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 35px;
+  text-align: center;
+  color: var(--primary);
+  background: var(--accent-soft);
+}
+
+.project-placeholder > span {
+  color: var(--textNeutral);
+  font-size: clamp(22px, 2.5vw, 38px);
+  letter-spacing: -1px;
+}
+
+.project-placeholder > small {
+  color: var(--textMinimal);
+  font-size: 10px;
+}

@@ -1,0 +1,71 @@
+.project-visual:has(.nuake-preview) {
+  height: auto;
+}
+.project-visual .nuake-preview,
+.project-render-expanded .nuake-preview {
+  position: relative;
+  top: 0;
+  height: auto;
+  background: oklch(1 0 0);
+}
+.nuake-preview .scaled-preview {
+  height: auto;
+  aspect-ratio: 1440 / 900;
+}
+.nuake-hero-render {
+  width: 1440px;
+  height: 900px;
+  padding: 40px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: hidden;
+  background: oklch(1 0 0);
+  color: oklch(0.145 0 0);
+  font-family: var(--font-mono), monospace;
+  text-align: left;
+}
+.dark .nuake-hero-render,
+.dark .nuake-preview {
+  background: oklch(0.145 0 0);
+  color: oklch(0.985 0 0);
+}
+.nuake-hero-brand,
+.nuake-hero-mission,
+.nuake-hero-action {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  flex-shrink: 0;
+}
+.nuake-hero-brand,
+.nuake-hero-action {
+  justify-content: space-between;
+}
+.nuake-hero-heading {
+  font-size: 130px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -5px;
+  flex-shrink: 0;
+}
+.nuake-hero-brand img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.nuake-hero-render p {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+.nuake-hero-action p {
+  max-width: 40ch;
+}
+.nuake-hero-render .nuake-hero-closing {
+  width: 40ch;
+  max-width: 100%;
+  margin: auto auto 90px;
+}

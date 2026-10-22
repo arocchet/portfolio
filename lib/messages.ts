@@ -1,0 +1,196 @@
+export const messages = {
+  fr: {
+    nav: ["Accueil", "Projets", "Compétences", "Parcours"],
+    skip: "Aller au contenu",
+    contact: "On échange ?",
+    language: "Langue",
+    theme: "Changer le mode clair / sombre",
+    enableMotion: "Activer les animations complètes",
+    reduceMotion: "Réduire les animations",
+    accent: "Couleur d’accent",
+    colors: ["Jaune", "Violet", "Bleu"],
+    role: "Développeur full-stack",
+    location: "Rouen, Normandie · France",
+    heroTop: "ADRIEN R. / PORTFOLIO",
+    heroFirst: "CONCEVOIR.",
+    heroSecond: "DÉVELOPPER.",
+    heroThird: "FAIRE AVANCER.",
+    intro:
+      "Développeur full-stack à Rouen. Je conçois des applications utiles, de l’interface aux données, avec une attention particulière à la clarté et à l’expérience utilisateur.",
+    explore: "Explorer mes projets",
+    scroll: "DÉCOUVRIR LE PORTFOLIO",
+    projects: "PROJETS SÉLECTIONNÉS",
+    projectTitle: "Des idées aux",
+    projectEmphasis: "interfaces.",
+    projectIntro:
+      "Une sélection de projets. Des univers différents, la même envie de construire quelque chose d’utile.",
+    details: "Explorer le projet",
+    close: "Fermer",
+    projectNote: "Aperçu du projet",
+    stack: "Technologies",
+    skillsLabel: "EXPERTISE",
+    skillsTitle: "Une vision",
+    skillsEmphasis: "full-stack.",
+    skillsIntro:
+      "Du cadrage au déploiement : conception, développement, infrastructure et travail en équipe.",
+    skillGroups: [
+      "Interface & expérience",
+      "Backend & authentification",
+      "DevOps & infrastructure",
+      "Méthode & conception",
+    ],
+    skillDescriptions: [
+      "Concevoir des interfaces claires et réactives, avec TanStack Query pour les données et leur cache.",
+      "Structurer les données, valider les entrées avec Zod et exposer des API authentifiées.",
+      "Administrer les VPS, automatiser les déploiements et gérer les secrets et les accès réseau.",
+      "Concevoir les interfaces avec Figma, prioriser le backlog et organiser les sprints et les sprint reviews avec Jira et GitHub Kanban.",
+    ],
+    aboutLabel: "MON HISTOIRE",
+    aboutTitle: "Apprendre.",
+    aboutEmphasis: "Construire.",
+    aboutText:
+      "Passionné d’informatique, j’apprends en construisant. Mon parcours à Zone01 Rouen Normandie m’amène à résoudre des problèmes concrets, à collaborer et à challenger mes idées.",
+    aboutSecond:
+      "Aujourd’hui en alternance au Crédit Agricole, je relie mes acquis techniques aux besoins du terrain. Ce qui me motive : comprendre, expérimenter et faire avancer un projet en équipe.",
+    aboutFreelance:
+      "J’ai commencé le développement en freelance avant mon alternance, et je poursuis cette activité aujourd’hui. C’est en réalisant ces projets que j’ai le plus développé mon expérience technique, de la conception au déploiement.",
+    timeline: [
+      {
+        title: "Baccalauréat",
+        subtitle: "Mathématiques & NSI",
+        text: "Les premières bases en logique, en algorithmique et en programmation.",
+      },
+      {
+        title: "L1 Informatique",
+        subtitle: "Fondations",
+        text: "Approfondir les algorithmes et comprendre les mécanismes derrière le code.",
+      },
+      {
+        title: "Zone01 Rouen Normandie",
+        subtitle: "Apprendre par les projets",
+        text: "Une formation collaborative, des projets concrets et la découverte de nouveaux langages.",
+      },
+      {
+        title: "Développeur freelance",
+        subtitle: "Activité indépendante · En cours",
+        text: "Une activité commencée avant l’alternance, au cœur de ma progression technique : concevoir, développer et déployer des applications.",
+      },
+      {
+        title: "Crédit Agricole",
+        subtitle: "Alternance",
+        text: "Mettre mes compétences en pratique et continuer à progresser en équipe.",
+      },
+    ],
+    schoolTitle: "Pas de cours classiques. Des défis concrets.",
+    schoolText:
+      "À Zone01, l’apprentissage se fait entre pairs, sur la plateforme 01Edu : développer, partager, auditer et recommencer. Une approche qui me pousse à être autonome tout en avançant avec les autres.",
+    endLabel: "PRENONS CONTACT",
+    endFirst: "UN PROJET EN TÊTE ?",
+    endSecond: "PARLONS-EN.",
+    endText:
+      "Un projet, une mission freelance, une opportunité d’alternance ou simplement envie de parler développement ? Échangeons sur LinkedIn.",
+    linkedin: "Me contacter sur LinkedIn",
+    github: "Me retrouver sur GitHub",
+    back: "Retour en haut",
+    footer: "Tout Droits Réservés.",
+    visitProject: "Voir le site",
+  },
+  en: {
+    nav: ["Home", "Projects", "Skills", "Journey"],
+    skip: "Skip to content",
+    contact: "Let’s connect",
+    language: "Language",
+    theme: "Toggle light / dark mode",
+    enableMotion: "Enable full animations",
+    reduceMotion: "Reduce animations",
+    accent: "Accent color",
+    colors: ["Yellow", "Purple", "Blue"],
+    role: "Full-stack developer",
+    location: "Rouen, Normandy · France",
+    heroTop: "ADRIEN R. / PORTFOLIO",
+    heroFirst: "DESIGN.",
+    heroSecond: "DEVELOP.",
+    heroThird: "MOVE FORWARD.",
+    intro:
+      "Full-stack developer based in Rouen. I build useful applications, from interfaces to data, with a focus on clarity and user experience.",
+    explore: "Explore my projects",
+    scroll: "DISCOVER THE PORTFOLIO",
+    projects: "SELECTED WORK",
+    projectTitle: "From ideas to",
+    projectEmphasis: "interfaces.",
+    projectIntro:
+      "A selection of projects. Different worlds, the same drive to build something useful.",
+    details: "Explore project",
+    close: "Close",
+    projectNote: "Project overview",
+    stack: "Technologies",
+    skillsLabel: "EXPERTISE",
+    skillsTitle: "A full-stack",
+    skillsEmphasis: "perspective.",
+    skillsIntro:
+      "From planning to deployment: design, development, infrastructure and teamwork.",
+    skillGroups: [
+      "Interface & experience",
+      "Backend & authentication",
+      "DevOps & infrastructure",
+      "Workflow & design",
+    ],
+    skillDescriptions: [
+      "Design clear, responsive interfaces, using TanStack Query for server data and caching.",
+      "Structure data, validate input with Zod and expose authenticated APIs.",
+      "Administer VPS, automate deployments and manage secrets and network access.",
+      "Design interfaces with Figma, prioritize the backlog and organize sprints and sprint reviews using Jira and GitHub Kanban.",
+    ],
+    aboutLabel: "MY STORY",
+    aboutTitle: "Learn.",
+    aboutEmphasis: "Build.",
+    aboutText:
+      "Passionate about computer science, I learn by building. My journey at Zone01 Rouen Normandy means solving real problems, collaborating and challenging my ideas.",
+    aboutSecond:
+      "Now on a work-study program at Crédit Agricole, I connect technical learning with practical needs. What drives me: understanding, experimenting and moving a project forward as a team.",
+    aboutFreelance:
+      "I started freelancing as a developer before my work-study program and continue to do so today. These projects have been my greatest source of technical experience, from design to deployment.",
+    timeline: [
+      {
+        title: "High school diploma",
+        subtitle: "Mathematics & computer science",
+        text: "The first foundations in logic, algorithms and programming.",
+      },
+      {
+        title: "Computer Science — year 1",
+        subtitle: "Foundations",
+        text: "Going deeper into algorithms and understanding the mechanisms behind code.",
+      },
+      {
+        title: "Zone01 Rouen Normandy",
+        subtitle: "Learning through projects",
+        text: "Collaborative training, practical projects and the discovery of new languages.",
+      },
+      {
+        title: "Freelance developer",
+        subtitle: "Independent work · Ongoing",
+        text: "Started before my work-study program and central to my technical growth: designing, developing and deploying applications.",
+      },
+      {
+        title: "Crédit Agricole",
+        subtitle: "Work-study program",
+        text: "Putting my skills into practice and continuing to grow with a team.",
+      },
+    ],
+    schoolTitle: "No traditional classes. Real challenges.",
+    schoolText:
+      "At Zone01, learning happens between peers on the 01Edu platform: build, share, review and repeat. An approach that encourages independence while moving forward together.",
+    endLabel: "GET IN TOUCH",
+    endFirst: "HAVE A PROJECT?",
+    endSecond: "LET’S TALK.",
+    endText:
+      "A project, a freelance opportunity, a work-study position, or just want to talk development? Let’s connect on LinkedIn.",
+    linkedin: "Contact me on LinkedIn",
+    github: "Find me on GitHub",
+    back: "Back to top",
+    footer: "All Rights Reserved",
+    visitProject: "Visit website",
+  },
+}
+
+export type Locale = keyof typeof messages

@@ -1,0 +1,45 @@
+/* Portfolio accents reuse the supplied palette without changing its background levels. */
+:root {
+  --accent-soft: color-mix(in srgb, var(--primary) 10%, var(--bgLevel1));
+  --action-fill: var(--blue60);
+  --action-text: var(--white0);
+}
+
+:root[data-accent="purple"] {
+  --primary: var(--purple40);
+  --primary-foreground: var(--white0);
+  --ring: var(--purple20);
+  --action-fill: var(--purple40);
+}
+
+.dark[data-accent="purple"] {
+  --primary: var(--purple15);
+  --primary-foreground: var(--grey90);
+  --action-fill: var(--purple15);
+  --action-text: var(--grey90);
+}
+
+:root[data-accent="yellow"] {
+  --primary: var(--yellow75);
+  --primary-foreground: var(--white0);
+  --ring: var(--yellow65);
+  --action-fill: var(--yellow45);
+  --action-text: var(--grey90);
+}
+
+.dark[data-accent="yellow"] {
+  --primary: var(--yellow45);
+  --primary-foreground: var(--grey90);
+  --ring: var(--yellow45);
+  --action-fill: var(--yellow45);
+  --action-text: var(--grey90);
+}
+
+@keyframes gradient-slide {
+  from {
+    background-position: 300% center;
+  }
+  to {
+    background-position: 0% center;
+  }
+}
