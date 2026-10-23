@@ -55,7 +55,7 @@ export default function ProjectDialog({
       }}
     >
       {content && selected && (
-        <>
+        <div className="project-dialog-content">
           <header className="dialog-header">
             <span className="eyebrow mono">{t.projectNote}</span>
             <div className="dialog-top">
@@ -102,7 +102,7 @@ export default function ProjectDialog({
               <ArrowUpRight size={17} />
             </a>
           )}
-        </>
+        </div>
       )}
     </dialog>
   )

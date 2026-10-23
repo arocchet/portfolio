@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "./theme.css";
 @import "./theme-accents.css";
+@import "../components/portfolio/scroll-depth-background.css";
 @import "../components/portfolio/technologies.css";
 @import "../components/portfolio/projects.css";
 @import "../components/portfolio/skills.css";
@@ -48,6 +49,15 @@ a:focus-visible {
 }
 .mono {
   font-family: var(--font-mono), monospace;
+}
+:is(.primary-link, .language-button, .icon-button, .back-top, .skip-link) {
+  border-radius: calc(var(--radius) * 0.6);
+}
+:is(.project-visual, .project-dialog, .project-render-expanded) {
+  border-radius: var(--radius);
+}
+.tags li {
+  border-radius: calc(var(--radius) * 0.4);
 }
 .section-shell {
   padding-left: 6%;
@@ -312,10 +322,10 @@ h2 > span {
   width: 100%;
 }
 .visual-inner {
-  height: 112%;
+  height: 100%;
   width: 100%;
   position: absolute;
-  top: -6%;
+  top: 0;
   left: 0;
 }
 .project-open {
@@ -598,13 +608,19 @@ h2 > span {
   background: var(--bgLevel2);
   color: var(--textNeutral);
   border: 1px solid var(--detailMinimal);
-  padding: 30px;
+  padding: 6px;
   max-width: 640px;
   width: calc(100% - 32px);
   max-height: 85svh;
+  overflow: hidden;
+  margin: auto;
+}
+.project-dialog-content {
+  max-height: calc(85svh - 14px);
   overflow: auto;
   scrollbar-gutter: stable;
-  margin: auto;
+  border-radius: calc(var(--radius) - 6px);
+  padding: 24px;
 }
 .project-dialog::backdrop {
   background: #0009;
@@ -612,7 +628,7 @@ h2 > span {
 }
 .dialog-header {
   position: sticky;
-  top: -30px;
+  top: -24px;
   z-index: 3;
   padding-block: 12px 16px;
   background: var(--bgLevel2);
@@ -635,7 +651,7 @@ h2 > span {
   font-size: 36px;
   margin: 0;
 }
-.project-dialog > p {
+.project-dialog-content > p {
   font-size: 15px;
   line-height: 1.9;
   color: var(--textMinimal);

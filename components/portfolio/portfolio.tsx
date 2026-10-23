@@ -4,6 +4,7 @@ import { useLocale } from "@/components/locale-provider"
 import { usePortfolioAnimations } from "@/hooks/use-portfolio-animations"
 import SmoothScroll from "@/components/custom/smooth-scroll"
 import ScrollProgress from "@/components/custom/scroll-progress"
+import ScrollDepthBackground from "./scroll-depth-background"
 import SiteHeader from "./site-header"
 import HeroSection from "./hero-section"
 import TechnologyRibbon from "./technology-ribbon"
@@ -18,7 +19,8 @@ export default function Portfolio() {
   const { locale, t } = useLocale()
   usePortfolioAnimations(root, locale)
   return (
-    <div ref={root}>
+    <div ref={root} className="portfolio">
+      <ScrollDepthBackground />
       <a className="skip-link" href="#home">
         {t.skip}
       </a>
@@ -27,8 +29,10 @@ export default function Portfolio() {
       <SmoothScroll>
         <main>
           <HeroSection />
-          <TechnologyRibbon />
-          <ProjectsSection />
+          <section id="projects" aria-labelledby="projects-title">
+            <TechnologyRibbon />
+            <ProjectsSection />
+          </section>
           <SkillsSection />
           <AboutSection />
           <ContactSection />

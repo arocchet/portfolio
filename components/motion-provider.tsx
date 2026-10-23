@@ -4,6 +4,7 @@ import {
   createContext,
   useContext,
   useEffect,
+  useRef,
   useState,
   type ReactNode,
 } from "react"
@@ -16,16 +17,27 @@ const MotionContext = createContext<{
 
 export function MotionProvider({ children }: { children: ReactNode }) {
   const [mode, setMode] = useState<MotionMode>("full")
+  const hasPreference = useRef(false)
   const reduced = mode === "reduced"
 
   useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)")
+    let initialMode: MotionMode = media.matches ? "reduced" : "full"
     try {
       const saved = localStorage.getItem("portfolio-motion")
-      if (saved === "full" || saved === "reduced")
-        queueMicrotask(() => setMode(saved))
+      if (saved === "full" || saved === "reduced") {
+        hasPreference.current = true
+        initialMode = saved
+      }
     } catch {
-      /* Animations stay enabled by default when storage is unavailable. */
+      /* Use the system preference when storage is unavailable. */
     }
+    queueMicrotask(() => setMode(initialMode))
+    const updateSystemPreference = () => {
+      if (!hasPreference.current) setMode(media.matches ? "reduced" : "full")
+    }
+    media.addEventListener("change", updateSystemPreference)
+    return () => media.removeEventListener("change", updateSystemPreference)
   }, [])
 
   useEffect(() => {
@@ -33,6 +45,7 @@ export function MotionProvider({ children }: { children: ReactNode }) {
   }, [reduced])
 
   function toggleMotion() {
+    hasPreference.current = true
     const next = reduced ? "full" : "reduced"
     setMode(next)
     try {

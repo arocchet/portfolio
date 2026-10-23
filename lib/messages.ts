@@ -20,8 +20,8 @@ export const messages = {
     explore: "Explorer mes projets",
     scroll: "DÉCOUVRIR LE PORTFOLIO",
     projects: "PROJETS SÉLECTIONNÉS",
-    projectTitle: "Des idées aux",
-    projectEmphasis: "interfaces.",
+    projectTitle: "Du code.",
+    projectEmphasis: "Des solutions concrètes.",
     projectIntro:
       "Une sélection de projets. Des univers différents, la même envie de construire quelque chose d’utile.",
     details: "Explorer le projet",
@@ -116,8 +116,8 @@ export const messages = {
     explore: "Explore my projects",
     scroll: "DISCOVER THE PORTFOLIO",
     projects: "SELECTED WORK",
-    projectTitle: "From ideas to",
-    projectEmphasis: "interfaces.",
+    projectTitle: "Code.",
+    projectEmphasis: "Practical solutions.",
     projectIntro:
       "A selection of projects. Different worlds, the same drive to build something useful.",
     details: "Explore project",

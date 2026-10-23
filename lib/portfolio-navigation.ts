@@ -12,7 +12,7 @@ export function scrollToSection(id: string) {
   const smoother = ScrollSmoother.get()
   const headerHeight =
     document.querySelector(".site-header")?.getBoundingClientRect().height ?? 72
-  const offset = headerHeight + 20
+  const offset = headerHeight
   const target = smoother
     ? smoother.offset(element, `top ${offset}px`)
     : element.getBoundingClientRect().top + window.scrollY - offset

@@ -14,11 +14,11 @@ export default function ProjectsSection() {
   const closeProject = useCallback(() => setSelected(null), [])
   return (
     <>
-      <section id="projects" className="section-shell projects-section">
+      <div className="section-shell projects-section">
         <div className="section-heading reveal">
           <div>
             <p className="eyebrow mono">01 / {t.projects}</p>
-            <h2>
+            <h2 id="projects-title">
               <RevealWords text={t.projectTitle} />
               <br />
               <span>
@@ -37,7 +37,7 @@ export default function ProjectsSection() {
             onSelect={setSelected}
           />
         ))}
-      </section>
+      </div>
       <ProjectDialog selected={selected} onClose={closeProject} />
     </>
   )

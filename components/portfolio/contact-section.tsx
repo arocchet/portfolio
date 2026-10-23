@@ -9,8 +9,8 @@ import { TechnologyIcon } from "./technology-icon"
 export default function ContactSection() {
   const { t } = useLocale()
   return (
-    <section id="contact" className="contact-section section-shell">
-      <div className="reveal">
+    <section id="contact" className="contact-section">
+      <div className="reveal section-shell">
         <p className="eyebrow mono">
           <span className="status-dot" />
           {t.endLabel}

@@ -9,6 +9,7 @@
   margin: 0 0 8px;
   padding: 7px 10px;
   border: 1px solid var(--detailMinimal);
+  border-radius: calc(var(--radius) * 0.4);
   color: var(--primary);
   font-size: 9px;
 }
@@ -21,7 +22,7 @@
   background: currentColor;
 }
 
-.project-dialog > .project-status {
+.project-dialog-content > .project-status {
   margin-top: 20px;
 }
 

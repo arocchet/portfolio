@@ -84,45 +84,8 @@ export function usePortfolioAnimations(
       })
 
       select(".project-visual").forEach((visual) => {
-        if (reduced) {
-          revealElements(visual, visual, true)
-          return
-        }
-        gsap.fromTo(
-          visual,
-          { opacity: 0, y: 40, clipPath: "inset(6% 3% 6% 3%)" },
-          {
-            opacity: 1,
-            y: 0,
-            clipPath: "inset(0% 0% 0% 0%)",
-            duration: 1.15,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: visual,
-              start: "top 88%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        )
-        // Keep screenshots entirely visible; parallax is reserved for decorative previews.
-        const preview = visual.querySelector(
-          ".nuake-preview, .edu-preview, .portfolio-preview"
-        )
-        if (preview)
-          gsap.fromTo(
-            preview,
-            { yPercent: -4 },
-            {
-              yPercent: 4,
-              ease: "none",
-              scrollTrigger: {
-                trigger: visual,
-                start: "top bottom",
-                end: "bottom top",
-                scrub: 0.7,
-              },
-            }
-          )
+        // Fade the card without moving or cropping its frame or preview.
+        revealElements(visual, visual, reduced, { distance: 0 })
       })
 
       if (!reduced) {

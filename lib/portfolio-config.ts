@@ -22,7 +22,7 @@ export const ribbonTechnologies: TechnologyName[] = [
   "Next.js",
   "TypeScript",
   "PostgreSQL",
-  "GSAP",
+  "Prisma",
   "React",
   "Docker",
 ]

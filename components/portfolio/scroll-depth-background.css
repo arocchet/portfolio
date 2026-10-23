@@ -1,0 +1,49 @@
+.portfolio {
+  position: relative;
+  isolation: isolate;
+}
+
+.scroll-depth-background {
+  --depth-progress: 0;
+  --depth-surface: var(--bgLevel1);
+  --depth-bottom: var(--bgLevel3);
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--depth-surface);
+}
+
+.dark .scroll-depth-background {
+  --depth-surface: color-mix(in srgb, var(--bgLevel1) 65%, var(--bgLevel2));
+  --depth-bottom: var(--bgLevel1);
+}
+
+.scroll-depth-abyss,
+.scroll-depth-particles {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-depth-abyss {
+  background: var(--depth-bottom);
+  opacity: var(--depth-progress);
+}
+
+.scroll-depth-particles {
+  display: block;
+  color: var(--textNeutral);
+  opacity: 0.8;
+}
+
+.dark .scroll-depth-particles {
+  opacity: 0.85;
+}
+
+/* Keep the descent visible through the final section, beneath its content. */
+.portfolio .contact-section {
+  background: color-mix(in srgb, var(--bgLevel2) 24%, transparent);
+}
