@@ -9,7 +9,7 @@ export default function NuakePreview() {
   const fr = locale === "fr"
   return (
     <div className="visual-inner nuake-preview" aria-hidden="true">
-      <ScaledPreview width={1440} height={900}>
+      <ScaledPreview width={1440} height={940}>
         <div className="nuake-hero-render">
           <div className="nuake-hero-brand">
             <span className="nuake-hero-heading">Nuaké</span>

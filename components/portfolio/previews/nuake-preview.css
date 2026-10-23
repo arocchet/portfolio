@@ -1,6 +1,3 @@
-.project-visual:has(.nuake-preview) {
-  height: auto;
-}
 .project-visual .nuake-preview,
 .project-render-expanded .nuake-preview {
   position: relative;
@@ -10,11 +7,11 @@
 }
 .nuake-preview .scaled-preview {
   height: auto;
-  aspect-ratio: 1440 / 900;
+  aspect-ratio: 1440 / 940;
 }
 .nuake-hero-render {
   width: 1440px;
-  height: 900px;
+  height: 940px;
   padding: 40px 72px;
   display: flex;
   flex-direction: column;

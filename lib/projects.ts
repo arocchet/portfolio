@@ -14,7 +14,7 @@ export type Project = {
   image: string | null
   imageAlt?: Record<Locale, string>
   imageFit?: "cover" | "contain"
-  preview?: "edu-togo" | "nuake" | "portfolio"
+  preview?: "edu-togo" | "nuake" | "portfolio" | "zone01"
   technologies: TechnologyName[]
   url: string | null
   status?: Record<Locale, string>
@@ -155,12 +155,8 @@ export const projects: Project[] = [
   },
   {
     id: "zone01",
-    image: "/projects/zone01-cursus.png",
-    imageFit: "contain",
-    imageAlt: {
-      fr: "Carte du cursus Zone01 : projets et branches de spécialisation, dont la branche Develop en cours.",
-      en: "Zone01 curriculum map: projects and specialization branches, including the ongoing Develop branch.",
-    },
+    image: null,
+    preview: "zone01",
     technologies: [],
     url: null,
     status: {

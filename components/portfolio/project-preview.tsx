@@ -7,11 +7,13 @@ import { useLocale } from "@/components/locale-provider"
 import EduTogoPreview from "./previews/edu-togo-preview"
 import NuakePreview from "./previews/nuake-preview"
 import PortfolioPreview from "./previews/portfolio-preview"
+import Zone01Preview from "./previews/zone01-preview"
 
 const previews = {
   "edu-togo": EduTogoPreview,
   nuake: NuakePreview,
   portfolio: PortfolioPreview,
+  zone01: Zone01Preview,
 }
 
 export default function ProjectPreview({ project }: { project: Project }) {

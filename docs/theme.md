@@ -30,7 +30,8 @@ sans changer les noms des classes.
 `components/portfolio/scroll-depth-background.tsx` dessine les particules dans un
 canvas fixe, placé en dehors du contenu transformé par ScrollSmoother. Un
 ScrollTrigger suit toute la page et transmet une progression de 0 à 1 à
-`--depth-progress` : le fond s’assombrit entre les niveaux de la palette. Le
+`--depth-progress`. L’assombrissement est actuellement désactivé : sa règle
+`opacity: var(--depth-progress)` reste en commentaire dans le CSS. Le
 déplacement des particules dépend aussi du scroll, avec des vitesses différentes
 selon leur profondeur. À l’arrêt, elles flottent légèrement autour de leur
 position avec des amplitudes, phases et vitesses aléatoires ; elles ne montent

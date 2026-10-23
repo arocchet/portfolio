@@ -2,7 +2,7 @@
   width: 100%;
   height: auto;
   position: relative;
-  padding: 8px;
+  padding: 0;
   background: var(--bgLevel2);
   color: var(--textNeutral);
 }
@@ -22,9 +22,6 @@
   height: auto;
   aspect-ratio: 1440 / 940;
 }
-.project-visual:has(.edu-admin-preview) {
-  height: auto;
-}
 .project-visual .edu-admin-preview {
   position: relative;
   top: 0;
@@ -36,8 +33,6 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 1px solid var(--detailMinimal);
-  border-radius: 12px;
   background: var(--bgLevel1);
   color: var(--textNeutral);
   font-family: var(--font-sans), sans-serif;
@@ -575,9 +570,4 @@
   border: 1px solid var(--detailMinimal);
   border-radius: 8px;
   overflow: hidden;
-}
-@media (max-width: 700px) {
-  .edu-admin-render {
-    padding: 5px;
-  }
 }

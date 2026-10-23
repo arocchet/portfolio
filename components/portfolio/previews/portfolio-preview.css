@@ -1,22 +1,19 @@
-.project-visual:has(.portfolio-preview) {
-  height: auto;
-}
 .project-visual .portfolio-preview,
 .project-render-expanded .portfolio-preview {
   position: relative;
   top: 0;
   height: auto;
-  padding: 6px;
+  padding: 0;
   background: var(--bgLevel2);
   color: var(--textNeutral);
 }
 .portfolio-preview .scaled-preview {
   height: auto;
-  aspect-ratio: 1440 / 920;
+  aspect-ratio: 1440 / 940;
 }
 .portfolio-render {
   width: 1440px;
-  height: 920px;
+  height: 940px;
   background: var(--bgLevel1);
   overflow: hidden;
   text-align: left;
@@ -65,7 +62,7 @@
   display: block;
 }
 .portfolio-render .hero {
-  height: 760px;
+  height: 780px;
   min-height: 0;
   max-width: none;
   padding: 65px 80px 45px;

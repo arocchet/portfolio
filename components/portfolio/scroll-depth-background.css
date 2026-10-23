@@ -30,7 +30,9 @@
 
 .scroll-depth-abyss {
   background: var(--depth-bottom);
-  opacity: var(--depth-progress);
+  /* Restore this line to enable scroll-driven background darkening. */
+  /* opacity: var(--depth-progress); */
+  opacity: 0;
 }
 
 .scroll-depth-particles {

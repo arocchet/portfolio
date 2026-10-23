@@ -10,6 +10,7 @@
 @import "../components/portfolio/hero-architecture.css";
 @import "../components/portfolio/previews/portfolio-preview.css";
 @import "../components/portfolio/previews/nuake-preview.css";
+@import "../components/portfolio/previews/zone01-preview.css";
 @import "../components/portfolio/previews/edu-togo/admin-preview.css";
 @custom-variant dark (&:is(.dark *));
 * {
@@ -312,10 +313,11 @@ h2 > span {
   align-items: center;
 }
 .project-visual {
-  border: 0;
+  border: 1px solid var(--detailMinimal);
   padding: 0;
   position: relative;
-  height: 390px;
+  height: auto;
+  aspect-ratio: 1440 / 940;
   overflow: hidden;
   text-align: left;
   background: var(--accent-soft);
@@ -327,6 +329,22 @@ h2 > span {
   position: absolute;
   top: 0;
   left: 0;
+}
+.project-visual > .visual-inner {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+.project-visual .edu-admin-render,
+.project-visual .scaled-preview {
+  height: 100%;
+}
+.project-visual .scaled-preview,
+.project-visual .zone01-galaxy {
+  aspect-ratio: auto;
+}
+.project-visual .zone01-galaxy {
+  height: 100%;
 }
 .project-open {
   position: absolute;
@@ -666,9 +684,6 @@ h2 > span {
   .hero {
     padding-top: 170px;
   }
-  .project-visual {
-    height: 490px;
-  }
 }
 @media (max-width: 1050px) {
   .main-nav {
@@ -677,9 +692,6 @@ h2 > span {
   .project {
     gap: 5%;
     grid-template-columns: 1.3fr 1fr;
-  }
-  .project-visual {
-    height: 330px;
   }
   .hero-art {
     opacity: 0.65;
@@ -793,9 +805,6 @@ h2 > span {
     grid-template-columns: 1fr;
     gap: 25px;
     padding: 30px 0 35px;
-  }
-  .project-visual {
-    height: 310px;
   }
   .project-info {
     position: relative;

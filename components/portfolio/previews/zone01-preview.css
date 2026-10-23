@@ -1,0 +1,16 @@
+.project-visual .zone01-preview,
+.project-render-expanded .zone01-preview {
+  position: relative;
+  top: 0;
+  height: auto;
+  padding: 0;
+  background: var(--bgLevel1);
+}
+
+.zone01-galaxy {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2300 / 2000;
+  overflow: hidden;
+}

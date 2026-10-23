@@ -10,7 +10,7 @@ export default function PortfolioPreview() {
   const { t, locale } = useLocale()
   return (
     <div className="visual-inner portfolio-preview" aria-hidden="true">
-      <ScaledPreview width={1440} height={920}>
+      <ScaledPreview width={1440} height={940}>
         <div className="portfolio-render" inert>
           <div className="portfolio-render-header">
             <span className="wordmark">Adrien Rocchetti</span>
