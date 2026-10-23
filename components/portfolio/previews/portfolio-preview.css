@@ -12,11 +12,16 @@
   aspect-ratio: 1440 / 940;
 }
 .portfolio-render {
+  position: relative;
+  isolation: isolate;
   width: 1440px;
   height: 940px;
   background: var(--bgLevel1);
   overflow: hidden;
   text-align: left;
+}
+.portfolio-render > .scroll-depth-background {
+  position: absolute;
 }
 .portfolio-render-header {
   height: 88px;
@@ -25,6 +30,7 @@
   align-items: center;
   padding: 0 80px;
   border-bottom: 1px solid var(--detailMinimal);
+  background: var(--portfolio-header-surface);
 }
 .portfolio-render .wordmark {
   font-size: 25px;
@@ -120,11 +126,16 @@
 .portfolio-render .scroll-cue {
   font-size: 9px;
 }
-.portfolio-render-ribbon {
+.portfolio-render > .stack-ribbon {
   height: 72px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border-block: 1px solid var(--detailMinimal);
-  background: var(--bgLevel2);
+}
+.portfolio-render .technology-ribbon {
+  padding: 0 6%;
+}
+.portfolio-render .technology-ribbon > li {
+  min-height: 70px;
+}
+.portfolio-render .ribbon-logo > .technology-icon {
+  width: 27px;
+  height: 27px;
 }

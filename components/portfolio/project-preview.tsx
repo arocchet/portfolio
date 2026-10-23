@@ -8,9 +8,11 @@ import EduTogoPreview from "./previews/edu-togo-preview"
 import NuakePreview from "./previews/nuake-preview"
 import PortfolioPreview from "./previews/portfolio-preview"
 import Zone01Preview from "./previews/zone01-preview"
+import AccountingPreview from "./previews/edu-tech/accounting-preview"
 
 const previews = {
   "edu-togo": EduTogoPreview,
+  "edu-tech": AccountingPreview,
   nuake: NuakePreview,
   portfolio: PortfolioPreview,
   zone01: Zone01Preview,

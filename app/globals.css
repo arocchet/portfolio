@@ -12,6 +12,7 @@
 @import "../components/portfolio/previews/nuake-preview.css";
 @import "../components/portfolio/previews/zone01-preview.css";
 @import "../components/portfolio/previews/edu-togo/admin-preview.css";
+@import "../components/portfolio/previews/edu-tech/accounting-preview.css";
 @custom-variant dark (&:is(.dark *));
 * {
   box-sizing: border-box;
@@ -78,6 +79,13 @@ a:focus-visible {
 .skip-link:focus {
   top: 10px;
 }
+.site-header,
+.portfolio-render-header {
+  --portfolio-header-surface: color-mix(in srgb, var(--bgLevel1) 92%, transparent);
+}
+.dark :is(.site-header, .portfolio-render-header) {
+  --portfolio-header-surface: color-mix(in srgb, var(--bgLevel2) 75%, var(--bgLevel1));
+}
 .site-header {
   position: fixed;
   z-index: 90;
@@ -89,7 +97,7 @@ a:focus-visible {
   justify-content: space-between;
   padding: 23px 6%;
   border-bottom: 1px solid var(--detailMinimal);
-  background: color-mix(in srgb, var(--bgLevel1) 92%, transparent);
+  background: var(--portfolio-header-surface);
   backdrop-filter: blur(16px);
 }
 .wordmark {

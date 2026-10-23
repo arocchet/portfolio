@@ -22,7 +22,11 @@ type Particle = {
 
 const wrap = (value: number, range: number) => ((value % range) + range) % range
 
-export default function ScrollDepthBackground() {
+export default function ScrollDepthBackground({
+  preview = false,
+}: {
+  preview?: boolean
+}) {
   const container = useRef<HTMLDivElement>(null)
   const canvas = useRef<HTMLCanvasElement>(null)
   const { reduced } = useMotion()
@@ -126,13 +130,16 @@ export default function ScrollDepthBackground() {
 
       resize()
       // ScrollTrigger shares the same scroll coordinates as ScrollSmoother.
-      const trigger = ScrollTrigger.create({
-        start: 0,
-        end: "max",
-        onUpdate: updateDepth,
-        onRefresh: updateDepth,
-      })
-      updateDepth(trigger)
+      // A miniature represents the top of the page, independent of outer scroll.
+      const trigger = preview
+        ? null
+        : ScrollTrigger.create({
+            start: 0,
+            end: "max",
+            onUpdate: updateDepth,
+            onRefresh: updateDepth,
+          })
+      if (trigger) updateDepth(trigger)
 
       const tick = (_time: number, delta: number) => {
         if (document.hidden) return
@@ -165,15 +172,20 @@ export default function ScrollDepthBackground() {
       })
       if (!still) {
         gsap.ticker.add(tick)
-        window.addEventListener("pointermove", movePointer, {
-          passive: true,
-        })
-        document.documentElement.addEventListener("pointerleave", resetPointer)
-        window.addEventListener("blur", resetPointer)
+        if (!preview) {
+          window.addEventListener("pointermove", movePointer, {
+            passive: true,
+          })
+          document.documentElement.addEventListener(
+            "pointerleave",
+            resetPointer
+          )
+          window.addEventListener("blur", resetPointer)
+        }
       }
 
       return () => {
-        trigger.kill()
+        trigger?.kill()
         observer.disconnect()
         themeObserver.disconnect()
         gsap.ticker.remove(tick)
@@ -186,7 +198,7 @@ export default function ScrollDepthBackground() {
         element.style.removeProperty("--depth-progress")
       }
     },
-    { dependencies: [reduced], revertOnUpdate: true }
+    { dependencies: [reduced, preview], revertOnUpdate: true }
   )
 
   return (

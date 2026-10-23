@@ -14,7 +14,7 @@ export type Project = {
   image: string | null
   imageAlt?: Record<Locale, string>
   imageFit?: "cover" | "contain"
-  preview?: "edu-togo" | "nuake" | "portfolio" | "zone01"
+  preview?: "edu-togo" | "edu-tech" | "nuake" | "portfolio" | "zone01"
   technologies: TechnologyName[]
   url: string | null
   status?: Record<Locale, string>
@@ -119,6 +119,7 @@ export const projects: Project[] = [
   {
     id: "edu-tech-services",
     image: null,
+    preview: "edu-tech",
     technologies: [
       "Next.js",
       "TypeScript",

@@ -11,6 +11,13 @@ Les données fictives et les textes FR/EN sont centralisés dans `fixtures.ts`.
 Ce rendu ne fait aucun appel aux API d’Edu-togo. Il s’adapte à la carte et
 se retrouve en grand dans la fiche du projet.
 
+Les deux aperçus Edu partagent `previews/preview-language.tsx` pour afficher
+les drapeaux FR/GB en SVG, indépendamment du support des emojis du système.
+L’aperçu du portfolio réutilise `HeroSection`, `TechnologyRibbon` et
+`ScrollDepthBackground` : les particules, les couleurs, les arrondis et la
+préférence d’animation suivent la page. Le fond miniature reste au début de
+son propre contenu, sans se déplacer avec le défilement de la page parente.
+
 ## Utiliser une image à la place d’un rendu
 
 1. Déposer la capture dans `public/projects/edu-togo.webp` (ou PNG/JPG).
@@ -50,6 +57,21 @@ zoom, du déplacement ou des infobulles. Les quatre références sans définitio
 ont été retirées du rendu. Les interactions nécessiteraient le code de la
 plateforme correspondant ; elles ne sont pas simulées dans cet aperçu.
 
+## Aperçu comptabilité Edu-Tech & Services
+
+Le rendu React dans `previews/edu-tech/` reprend la présentation de
+`components/custom/billing/stats/billing-stats-overview.tsx`, de `StatCard`
+et de la sidebar du projet local `../Edu-Tech-Services`. Les libellés sont
+disponibles en français et en anglais ; les couleurs suivent les mêmes tokens
+de thème et les types de documents conservent leurs couleurs d’origine.
+
+Les huit documents de `fixtures.ts` sont entièrement fictifs. Les indicateurs,
+les séries journalières et la répartition sont calculés à partir de cette même
+liste. Aucun appel aux API, accès aux comptes ou données de production n’est
+nécessaire. Les graphiques SVG sont des rendus statiques ; les filtres et les
+commandes représentent l’interface sans exécuter d’action. `ScaledPreview`
+adapte le rendu au cadre responsive et à la fenêtre de détail.
+
 ## Ajouter un projet
 
 Ajouter un objet au tableau `projects`, avec un `id` unique, une `image`
@@ -57,8 +79,8 @@ Ajouter un objet au tableau `projects`, avec un `id` unique, une `image`
 `content.fr` et `content.en` : `title`, `category`, `description`, `detail`.
 
 Le projet **Edu-Tech & Services** est déjà ajouté avec sa base technique
-(Next.js, TypeScript, Prisma, REST API, Better Auth et SSO). Ses textes et son
-image pourront être complétés au fil du développement. Le champ
+(Next.js, TypeScript, Prisma, REST API, Better Auth et SSO), avec un aperçu
+de sa page comptabilité. Le champ
 optionnel `status` permet d’afficher un statut en français et en anglais.
 
 Les cartes, les numéros et les fenêtres de détail sont générés automatiquement.

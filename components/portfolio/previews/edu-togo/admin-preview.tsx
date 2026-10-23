@@ -3,6 +3,7 @@
 import { Bell, ChevronDown, PanelLeft, Sun } from "lucide-react"
 import { useLocale } from "@/components/locale-provider"
 import ScaledPreview from "../scaled-preview"
+import PreviewLanguage from "../preview-language"
 import { demoAccount, eduCopy } from "./fixtures"
 import { EduSidebar } from "./sidebar"
 import { EduKpiCards } from "./kpi-cards"
@@ -34,9 +35,7 @@ export default function EduTogoAdminPreview() {
                   2026 – 2027
                   <ChevronDown size={12} />
                 </span>
-                <span className="edu-admin-language">
-                  {locale === "fr" ? "🇫🇷 Fr" : "🇬🇧 En"}
-                </span>
+                <PreviewLanguage locale={locale} />
                 <span className="edu-admin-toolbar-icon">
                   <Bell size={15} />
                 </span>
